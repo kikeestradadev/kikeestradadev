@@ -1,0 +1,12 @@
+extends ../config/template 
+append config
+	-currentPage		= "home"
+	-siteName			= 'site'
+	-content			= 'content'
+	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+block body-container
+		include ../core-components/core-component
+		include ../internal-components/internal-component
+		//include ../internal-components/flex
+		//include ../internal-components/grid
+block scripts
