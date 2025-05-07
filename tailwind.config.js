@@ -5,15 +5,6 @@ export default {
 		"./public/**/*.html"
 	],
 	theme: {
-		screens: {
-			's': '0px',
-			'sm': '480px',
-			'm': '640px',
-			'l': '960px',
-			'lg': '1280px',
-			'xl': '1600px',
-			'xxl': '1900px',
-		},
 		extend: {},
 	},
 	plugins: [],
