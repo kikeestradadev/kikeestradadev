@@ -1,32 +1,14 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
 
-@theme {
-	--breakpoint-s: 0;
-	--breakpoint-sm: 480px;
-	--breakpoint-md: 640px;
-	--breakpoint-lg: 960px;
-	--breakpoint-xl: 1280px;
-	--breakpoint-xxl: 1600px;
+.main-container {
+	width: 100%;
+	max-width: 3500px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
-
-@layer utilities {
-  .main-container {
-    width: 100%;
-    max-width: 3500px;
-    margin: 0 auto; 
-    padding: 0 15px;
-  }
-
-  @media (min-width: 1630px) {
-    .main-container {
-      padding: 0 0;
-    }
-  }
-
-  .container {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
+.container{ 
+	width: 100%;
+	max-width: 1600px; 
+	margin: 0 auto;
 }
