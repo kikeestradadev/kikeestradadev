@@ -1,0 +1,24 @@
+// Default text styles
+::selection {
+	color: white;
+	background: var(--base-color); 
+}
+
+html, body, p, span, table td, table th, a {
+	font-family: "DM Sans", sans-serif;
+	text-wrap: pretty;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Denominary';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Denominary'), url('https://fonts.cdnfonts.com/s/99736/denominary-bold.woff') format('woff');
+}
+
+

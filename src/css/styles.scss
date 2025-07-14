@@ -1,0 +1,15 @@
+@import "core/media-queries";
+@import "core/fonts";
+@import "components/components";
+
+.main-container {
+	width: 100%;
+	max-width: 3500px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.container{ 
+	width: 100%;
+	max-width: 1600px; 
+	margin: 0 auto;
+}
