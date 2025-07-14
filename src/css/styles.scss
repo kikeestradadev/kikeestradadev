@@ -2,6 +2,12 @@
 @import "core/fonts";
 @import "components/components";
 
+body{
+	@include fromTo(m,xl){
+		background-color: red;
+	}
+}
+
 .main-container {
 	width: 100%;
 	max-width: 3500px;
