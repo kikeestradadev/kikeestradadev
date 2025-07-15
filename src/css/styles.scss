@@ -7,7 +7,10 @@ body{
 		background-color: red;
 	}
 }
-
+::selection {
+	color: white;
+	background: #9e852e;
+}
 .main-container {
 	width: 100%;
 	max-width: 3500px;
