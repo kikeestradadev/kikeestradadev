@@ -1,18 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
-	html, bodybody, h1, h2, h3, h4, h5, h6, p, span, strong, b, .lp-pom-text, .lp-pom-button, .lp-pom-root, .lp-pom-block, .lp-pom-form, .lp-pom-form-field {
-	font-family: 'Montserrat', sans-serif !important;
-	font-stretch: normal !important;
-	font-style: normal !important;
-
-	letter-spacing: normal !important;
-	-webkit-font-smoothing: antialiased !important;
-	-moz-osx-font-smoothing: grayscale !important;
-	text-rendering: optimizeLegibility !important;
+html, body, span, p, a, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6, strong, b, .lp-pom-text, .lp-pom-button, .lp-pom-root, .lp-pom-block, .lp-pom-form, .lp-pom-form-field {
+	font-family: 'Aeonik', sans-serif !important;
 }
 
 ::selection {
 	color: white;
 	background: var(--base-color);
+	font-family: 'Aeonik', sans-serif !important;
 }
 .lp-pom-body,
 #lp-pom-root,

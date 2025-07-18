@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Aeonik';
+    src: url(' https://img.betanysports.eu/bafonts/Aeonik-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(' https://img.betanysports.eu/bafonts/Aeonik-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(' https://img.betanysports.eu/bafonts/Aeonik-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(' https://img.betanysports.eu/bafonts/Aeonik-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(' https://img.betanysports.eu/bafonts/Aeonik-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(' https://img.betanysports.eu/bafonts/Aeonik-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+::selection {
+	color: white;
+	background: var(--base-color); 
+}
+
+html, body, span, p, a, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Aeonik', sans-serif !important;
+}
+

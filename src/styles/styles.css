@@ -1,0 +1,92 @@
+@use 'sass:map';
+@use 'sass:meta';
+@font-face {
+    font-family: 'Aeonik';
+    src: url(" https://img.betanysports.eu/bafonts/Aeonik-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(" https://img.betanysports.eu/bafonts/Aeonik-RegularItalic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(" https://img.betanysports.eu/bafonts/Aeonik-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(" https://img.betanysports.eu/bafonts/Aeonik-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(" https://img.betanysports.eu/bafonts/Aeonik-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(" https://img.betanysports.eu/bafonts/Aeonik-BoldItalic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* line 43, Users/enrique.estrada/Documents/Empresas/BAS/web-bundles/front-end-prepros-boilerplate-tailwind-4/src/styles/core/_fonts.scss */
+::-moz-selection {
+    color: white;
+    background: var(--base-color);
+}
+::selection {
+    color: white;
+    background: var(--base-color);
+}
+
+/* line 48, Users/enrique.estrada/Documents/Empresas/BAS/web-bundles/front-end-prepros-boilerplate-tailwind-4/src/styles/core/_fonts.scss */
+html, body, span, p, a, ul, ol, li, table, th, td, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aeonik', sans-serif !important;
+}
+
+@use "component-1";
+@media (min-width: 640px) and (max-width: calc(1600px - 1px)) {
+    /* line 5, Users/enrique.estrada/Documents/Empresas/BAS/web-bundles/front-end-prepros-boilerplate-tailwind-4/src/styles/styles.scss */
+    body {
+        background-color: green;
+    }
+}
+
+/* line 10, Users/enrique.estrada/Documents/Empresas/BAS/web-bundles/front-end-prepros-boilerplate-tailwind-4/src/styles/styles.scss */
+::-moz-selection {
+    color: white;
+    background: #9e852e;
+}
+::selection {
+    color: white;
+    background: #9e852e;
+}
+
+/* line 14, Users/enrique.estrada/Documents/Empresas/BAS/web-bundles/front-end-prepros-boilerplate-tailwind-4/src/styles/styles.scss */
+.main-container {
+    width: 100%;
+    max-width: 3500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* line 20, Users/enrique.estrada/Documents/Empresas/BAS/web-bundles/front-end-prepros-boilerplate-tailwind-4/src/styles/styles.scss */
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+/*# sourceMappingURL=styles.css.map */
