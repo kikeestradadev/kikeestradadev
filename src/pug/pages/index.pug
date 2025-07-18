@@ -4,15 +4,10 @@ append config
 	-siteName			= 'site'
 	-content			= 'content'
 	-pageDescription	= 'Pagina inicial de MyBoilerplate'
-block body-container
-	h1(class="text-6xl font-bold") 600 pixeles
-	include ../components/style-guide 
-	include ../components/editor-css
-	include ../components/flex-module
-	include ../components/grid-module
-	include ../components/list-module
-	include ../components/sidebar-module
-	include ../components/sprite-svg	
-	include ../components/table-module
-	include ../components/text-module 
-block scripts 
+block main-header
+block main-container
+	section(class="main-container border border-[steelblue]") 
+		div(class="container  border border-[tomato]") 
+			h1(class="text-6xl font-bold") Boilerplate
+block main-footer
+block scripts

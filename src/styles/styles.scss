@@ -1,22 +1,33 @@
 @import "core/media-queries";
 @import "core/fonts";
 @import "components/components";
-
 body{
 	@include fromTo(m,xl){
-		background-color: green;
+		background-color: green !important;
 	}
 }
 ::selection { 
 	color: white;
 	background: #9e852e;
 }
+
+:root{
+	--base-color: steelblue;
+	--header-height: 96px;
+	--footer-height: 96px;
+	@include from(l){
+		--header-height: 150px;
+		--footer-height: 150px;
+	}
+}
+
 .main-container {
 	width: 100%;
 	max-width: 3500px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
+
 .container{ 
 	width: 100%;
 	max-width: 1600px; 
