@@ -1,268 +1,97 @@
-import gulp from 'gulp'
-import plumber from 'gulp-plumber'
-import pug from 'gulp-pug'
-import browserSync from 'browser-sync'
-import sass from 'gulp-sass'
-import postcss from 'gulp-postcss'
-import cssnano from 'cssnano'
-import watch from 'gulp-watch'
-import browserify from 'browserify'
-import babelify from 'babelify'
-import source from 'vinyl-source-stream'
-import sourcemaps from 'gulp-sourcemaps'
-import buffer from 'vinyl-buffer'
-import minify from 'gulp-minify'
-import imagemin from 'gulp-imagemin'
-import sitemap from 'gulp-sitemap'
-import cachebust from 'gulp-cache-bust'
-import tildeImporter from 'node-sass-tilde-importer'
-import humans from 'gulp-humans'
-import data from 'gulp-data'
-import fs from 'fs'
-import uncss from 'gulp-uncss'
-import cleanCSS from 'gulp-clean-css'
-import stripCssComments from 'gulp-strip-css-comments';
+import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import pug from 'gulp-pug';
+import browserSync from 'browser-sync';
+import gulpSass from 'gulp-sass';
+import sassCompiler from 'sass';
+import postcss from 'gulp-postcss';
+import cssnano from 'cssnano';
+import browserify from 'browserify';
+import babelify from 'babelify';
+import source from 'vinyl-source-stream';
+import sourcemaps from 'gulp-sourcemaps';
+import buffer from 'vinyl-buffer';
+import minify from 'gulp-minify';
+import data from 'gulp-data';
+import fs from 'fs';
+import path from 'path';
+import cacheBust from 'gulp-cache-bust';
 
-const server = browserSync.create();
+// Set the Sass compiler
+const sass = gulpSass(sassCompiler);
 
-const dir = {
-	src   : 'src',
-	dist  : 'public',
-	nm    : 'node_modules',
+// Función para leer todos los archivos JSON en un directorio
+const getJsonData = () => {
+    const dataDir = './src/data/';
+    const files = fs.readdirSync(dataDir);
+    let jsonData = {};
+
+    files.forEach(file => {
+        if (path.extname(file) === '.json') {
+            const fileData = fs.readFileSync(path.join(dataDir, file));
+            Object.assign(jsonData, JSON.parse(fileData));
+        }
+    });
+
+    return jsonData;
 };
 
-const postcssPlugins = [
-	cssnano({
-		core: true,
-		zindex: false,
-		autoprefixer: {
-			add: true,
-			browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'
-		}
-	})
-];
-
-
-gulp.task('styles-dev', () => {
-	gulp.src('./src/scss/styles.scss')
-		.pipe(sourcemaps.init({ loadMaps : true}))
-		.pipe(plumber())
-		.pipe(sass({
-			importer: tildeImporter,
-			outputStyle: 'expanded',
-			includePaths: ['./node_modules']
-		}))
-		.pipe(postcss(postcssPlugins))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./public/assets/css/'))
-		.pipe(server.stream({match: '**/*.css'}))
+// Tarea pug
+gulp.task('pug', () => {
+    return gulp.src('./src/pug/pages/**/*.pug')
+        .pipe(plumber())
+        .pipe(data(() => getJsonData()))  // Usamos la función para obtener datos
+        .pipe(pug({
+            pretty: true  // Asegura que el HTML no esté minificado
+        }))
+        .pipe(cacheBust({  // Aplicamos cache busting aquí
+            type: 'timestamp'  // Usamos timestamp para asegurar la actualización de cache
+        }))
+        .pipe(gulp.dest('public'));
 });
 
-gulp.task('styles-build', () => {
-	gulp.src('./src/scss/styles.scss')
-		.pipe(plumber())
-		.pipe(sass({
-			outputStyle: 'compressed',
-			importer: tildeImporter,
-			includePaths: ['./node_modules']
-		}))
-		.pipe(postcss(postcssPlugins))
-		.pipe(cleanCSS({
-			advanced: false,
-			keepBreaks: false,
-			keepSpecialComments: 0,
-			compatibility: ''
-		}))
-		.pipe(stripCssComments({
-			preserve: false
-		}))
-		.pipe(uncss({
-			html : [
-				'./public/*.html'
-			],
-			ignore: [
-				'tag.class'
-			],
-			ignoreSheets: [
-				//
-			]
-		}))
-		.pipe(gulp.dest('./public/assets/css/'))
+gulp.task('sass', () => {
+    return gulp.src('src/scss/*.scss')
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([cssnano()]))
+        .pipe(sourcemaps.write('.'))
+		
+        .pipe(gulp.dest('public/'));
 });
 
-gulp.task('pug-dev', () =>
-	gulp.src('./src/pug/pages/**/*.pug')
-		.pipe(plumber())
-		.pipe(data(function(file) {
-			return 	JSON.parse(fs.readFileSync(`${dir.src}/data/example.json`))
-		}))
-		.pipe(pug({
-			pretty: true,
-			basedir: './src/pug'
-		}))
-		.pipe(gulp.dest('./public'))
-);
-
-gulp.task('pug-build', () =>
-	gulp.src('./src/pug/pages/**/*.pug')
-		.pipe(plumber())
-		.pipe(data(function(file) {
-			return 	JSON.parse(fs.readFileSync(`${dir.src}/data/example.json`))
-		}))
-		.pipe(pug({
-			basedir: './src/pug'
-		}))
-		.pipe(gulp.dest('./public'))
-);
-
-gulp.task('scripts-dev', () =>
-	browserify('./src/js/index.js')
-		.transform(babelify, {
-			global: true // permite importar desde afuera (como node_modules)
-		})
-		.bundle()
-		.on('error', function (err) {
-			console.error(err);
-			this.emit('end')
-		})
-		.pipe(source('scripts.js'))
-		.pipe(buffer())
-		.pipe(minify({
-			ext: {
-				src: '-min.js',
-				min: '.js'
-			}
-		}))
-		.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./public/assets/js'))
-);
-
-gulp.task('scripts-build', () =>
-	browserify('./src/js/index.js')
-		.transform(babelify, {
-			global: true // permite importar desde afuera (como node_modules)
-		})
-		.bundle()
-		.on('error', function (err) {
-			console.error(err)
-			this.emit('end')
-		})
-		.pipe(source('scripts.js'))
-		.pipe(buffer())
-		.pipe(minify({
-			ext: {
-				src: '.js',
-				min: '-min.js'
-			}
-		}))
-		.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./public/assets/js'))
-);
-
-gulp.task('images-build', () => {
-	gulp.src('./src/img/**/**')
-		.pipe(imagemin([
-			imagemin.gifsicle({interlaced: true}),
-			imagemin.jpegtran({progressive: true}),
-			imagemin.optipng({optimizationLevel: 5}),
-			imagemin.svgo()
-		]))
-		.pipe(gulp.dest('./public/assets/img'))
+gulp.task('scripts', () => {
+    return browserify('src/js/index.js')
+        .transform(babelify)
+        .bundle()
+        .pipe(source('index.js'))  // Mantén el nombre original
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(minify({
+            ext: {
+                min: '.js'  // Mantén la extensión .js sin agregar .min
+            }
+        }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('public/'));  // Coloca el archivo en public/
 });
 
-gulp.task('images-dev', () => {
-	gulp.src('./src/img/**/**')
-		.pipe(gulp.dest('./public/assets/img'))
-});
+gulp.task('serve', gulp.series('pug', 'sass', 'scripts', () => {
+    browserSync.init({
+        server: {
+            baseDir: 'public'
+        }
+    });
 
-gulp.task('css-dev-vendor', () => {
-	gulp.src('./src/vendors/prismjs.css')
-		.pipe(gulp.dest('./public/assets/css'))
-});
-
-gulp.task('fonts-dev', () => {
-	gulp.src('./src/fonts/**/**')
-		.pipe(gulp.dest('./public/assets/fonts'))
-});
-
-gulp.task('videos-dev', () => {
-	gulp.src('./src/video/**/**')
-		.pipe(gulp.dest('./public/assets/video'))
-});
+    gulp.watch('src/pug/**/*.pug', gulp.series('pug')).on('change', browserSync.reload);
+    gulp.watch('src/scss/**/*.scss', gulp.series('sass')).on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js', gulp.series('scripts')).on('change', browserSync.reload);
+    gulp.watch('src/data/**/*.json', gulp.series('pug')).on('change', browserSync.reload);
+    gulp.watch('src/md/**/*.md', gulp.series('pug')).on('change', browserSync.reload); // Add this line
+}));
 
 
-gulp.task('audios-dev', () => {
-	gulp.src('./src/audio/**/**')
-		.pipe(gulp.dest('./public/assets/audio'))
-});
-
-gulp.task('manifest', () => {
-	gulp.src('./src/manifest.json')
-		.pipe(gulp.dest('./public/'))
-});
-
-gulp.task('sw', () => {
-	gulp.src('./src/sw.js')
-		.pipe(gulp.dest('./public/'))
-});
-
-gulp.task('sitemap', () => {
-	gulp.src('./public/**/*.html', {
-		read: false
-	})
-		.pipe(sitemap({
-			siteUrl: 'https://kikeestrada.github.io/my-pwa/' // remplazar por tu dominio
-		}))
-		.pipe(gulp.dest('./public'))
-});
-
-gulp.task('dev', ['styles-dev', 'pug-dev', 'scripts-dev', 'images-dev','audios-dev', 'videos-dev', 'fonts-dev', 'manifest', 'sw'], () => {
-	server.init({
-		server: {
-			baseDir: './public'
-		}
-	});
-
-	watch('./src/scss/**/**', () => gulp.start('styles-dev'));
-	watch('./src/js/**/**', () => gulp.start('scripts-dev', server.reload));
-	watch('./src/pug/**/**', () => gulp.start('pug-dev', server.reload));
-	watch('./src/img/**/**', () => gulp.start('images-dev'))
-	watch('./src/manifest.json', () => gulp.start('manifest'))
-	watch('./src/sw.js', () => gulp.start('sw'))
-});
-
-gulp.task('cache', () => {
-	gulp.src('./public/**/*.html')
-		.pipe(cachebust({
-			type: 'timestamp'
-		}))
-		.pipe(gulp.dest('./public'))
-});
-
-gulp.task('humans', function () {
-	gulp.src('./public/**/*.html')
-		.pipe(humans({
-			thanks: [
-				'Node (@nodejs on Twitter)',
-				'Gulp (@gulpjs on Twitter)'
-			],
-			site: [
-				'Standards: HTML5, CSS3',
-				'Components: Normalize.css, etc',
-				'Software: Web Storm'
-			],
-			note: 'Built with love by Enrique Estrada.'
-		}))
-		.pipe(gulp.dest('./public'))
-});
-
-
-gulp.task('build', ['pug-build', 'scripts-build', 'images-build', 'cache', 'sitemap', 'humans', 'styles-build'], () => {
-	server.init({
-		server: {
-			baseDir: './public'
-		}
-	});
-});
+gulp.task('dev', gulp.series('serve'));
+gulp.task('build', gulp.series('pug', 'sass', 'scripts'));
+gulp.task('default', gulp.series('dev'));

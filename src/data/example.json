@@ -109,6 +109,12 @@
 				"title"		: "Cryptovig",
 				"source"	: "https://cryptovig.com/",
 				"live"		: "https://cryptovig.com/"
+			},
+			{
+				"img"		: "assets/img/bas.png",
+				"title"		: "BetAnySports",
+				"source"	: "https://www.betanything.eu/",
+				"live"		: "https://www.betanything.eu/"
 			}
 		]
 }
