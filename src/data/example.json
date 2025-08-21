@@ -2,10 +2,34 @@
 	"casos":
 		[
 			{
+				"img"		: "assets/img/bas.png",
+				"title"		: "BetAnySports",
+				"source"	: "https://www.betanything.eu/",
+				"live"		: "https://www.betanything.eu/"
+			},
+			{
+				"img"		: "assets/img/insiders.png",
+				"title"		: "Insiders",
+				"source"	: "https://insidersbettingdigest.com/",
+				"live"		: "https://insidersbettingdigest.com/"
+			},
+			{
+				"img"		: "assets/img/godds.png",
+				"title"		: "Godds",
+				"source"	: "https://godds.com/",
+				"live"		: "https://godds.com/"
+			},
+			{
 				"img"		: "assets/img/pf-images/pf_77digital.png",	
 				"title"		: "77 Digital",
 				"source"	: "https://github.com/kikeestrada/portfolio77DigitalWebSite",
-				"live"		: "https://kikeestrada.github.io/portfolio77DigitalWebSite/"
+				"live"		: "https://github.com/kikeestrada/portfolio77DigitalWebSite"
+			},
+			{
+				"img"		: "assets/img/crypto.png",
+				"title"		: "Crypto Tutorials",
+				"source"	: "https://crypto-tutorials.com/",
+				"live"		: "https://crypto-tutorials.com/"
 			},
 			{
 				"img"		: "assets/img/pf-images/pf_bootstrap.png",
@@ -50,12 +74,6 @@
 				"live"		: "https://kikeestrada.github.io/portfolio-css-frameworks/materialize.html"
 			},
 			{
-				"img"		: "assets/img/pf-images/pf_nextjs.png",
-				"title"		: "Next JS - API",
-				"source"	: "https://github.com/kikeestrada/portfolio-blog-nextjs",
-				"live"		: "https://portfolio-blog-nextjs-nhcpt6ktv.now.sh/"
-			},
-			{
 				"img"		: "assets/img/pf-images/pf_vanilla_api_fetch.png",
 				"title"		: "Vanilla JS API Fetch",
 				"source"	: "https://github.com/kikeestrada/portfolioVanillaJsApiFetch",
@@ -84,14 +102,9 @@
 				"title"		: "React Shopping Card",
 				"source"	: "https://kikeestrada.github.io/portfolioReactShopingCart",
 				"live"		: "https://github.com/kikeestrada/portfolioReactShopingCart"
-			},
+			}
 
 			
-			{
-				"img"		: "assets/img/bas.png",
-				"title"		: "BetAnySports",
-				"source"	: "https://www.betanything.eu/",
-				"live"		: "https://www.betanything.eu/"
-			}
+			
 		]
 }
