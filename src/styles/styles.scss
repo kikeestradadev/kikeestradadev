@@ -1,15 +1,13 @@
 @import "core/media-queries";
 @import "core/fonts";
+@import "core/layout";
 @import "components/components";
 body{
 	@include fromTo(m,xl){
 		background-color: green !important;
 	}
 }
-::selection { 
-	color: white;
-	background: #9e852e;
-}
+
 
 :root{
 	--base-color: steelblue;
@@ -21,15 +19,3 @@ body{
 	}
 }
 
-.main-container {
-	width: 100%;
-	max-width: 3500px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
-.container{ 
-	width: 100%;
-	max-width: 1600px; 
-	margin: 0 auto;
-}
