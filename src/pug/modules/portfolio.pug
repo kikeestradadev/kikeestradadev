@@ -58,10 +58,10 @@
 		}
 	]
 
-div(class="main-container py-12 lg:py-16 bg-gray-50")
+div(class="main-container bg-gray-50")
 	div(class="container")
 		h2(class="text-3xl lg:text-4xl font-bold mb-12 text-center") Portfolio
-		div(class="grid grid-cols-1 sm:grid-cols-2 m:grid-cols-3 lg:grid-cols-4 gap-6")
+		div(class="grid grid-cols-1 sm:grid-cols-2 m:grid-cols-3 lg:grid-cols-4 gap-6 py-12 lg:py-16")
 			each item in portfolioItems
 				- var hasLive = item.live && typeof item.live === 'string' && item.live.trim() !== '';
 				if hasLive
