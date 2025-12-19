@@ -8,7 +8,8 @@
   background: #9e852e;
 }
 
-html {
+html,
+body {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -29,21 +30,36 @@ html {
   color: red;
 }
 
-@media (min-width: 640px) and (max-width: calc(1600px - 1px)) {
-  body {
-    background-color: green !important;
+@media (hover: none) and (pointer: coarse) {
+  [class*="hover:"]:hover {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  [class*="hover:shadow"]:hover {
+    -webkit-box-shadow: inherit !important;
+            box-shadow: inherit !important;
+  }
+  [class*="hover:opacity"]:hover,
+  .group:hover [class*=opacity] {
+    opacity: inherit !important;
+  }
+  [class*="hover:text"]:hover,
+  [class*="hover:bg"]:hover,
+  [class*="hover:border"]:hover {
+    color: inherit !important;
+    background-color: inherit !important;
+    border-color: inherit !important;
   }
 }
-
 :root {
   --base-color: steelblue;
-  --header-height: 96px;
-  --footer-height: 96px;
+  --header-height: 64px;
+  --footer-height: 64px;
 }
 @media (min-width: 960px) {
   :root {
-    --header-height: 150px;
-    --footer-height: 150px;
+    --header-height: 64px;
+    --footer-height: 64px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

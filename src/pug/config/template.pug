@@ -7,7 +7,7 @@ doctype html
 html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 	head
 		meta(charset="utf-8")
-		meta(name="description", content="Your page description here")
+		meta(name="description", content=pageDescription)
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(name="apple-mobile-web-app-status-bar-style", content="default")
 		meta(name="format-detection", content="telephone=no")
@@ -18,19 +18,34 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="./tailwind-dist.css")
 		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
-	body(class=`${currentPage} bg-[var(--bg-body)] flex flex-col min-h-screen pt-[var(--header-height)]`, itemscope itemtype="http://schema.org/WebPage")
+	body(class=`${currentPage} bg-gray-50 flex flex-col min-h-screen`, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
-		header(class='fixed top-0 left-0 right-0 w-full min-h-[var(--header-height)] flex flex-col justify-between z-[1000000] bg-[var(--base-color)]')
+		header(class='w-full min-h-[var(--header-height)] flex items-center border-b border-blue-600/30 bg-white')
 			block main-header
 		//- here ends the Main Header
 		//- here start the Main Container
-		main(class='flex-1')
+		main(class='flex-1 py-10')
 			block main-container 
 		//- here ends the Main Container
 		//- here start the Main Footer
-		footer(class='bg-[var(--base-color)] h-[var(--footer-height)]')
+		footer(class='bg-[var(--base-color)] min-h-[var(--footer-height)]')
 			block main-footer
 		//- here ends the Main Footer
+		//- Floating Export PDF Button
+		button(id="exportPdfBtn" class="fixed bottom-6 right-6 z-[999999] bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-red-500/50 transition-all duration-300 flex items-center gap-3 font-semibold text-base group active:scale-95 border-2 border-white/30 backdrop-blur-sm")
+			svg(class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+				path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z")
+			span(class="hidden sm:inline") Export to PDF
+		script.
+			// Export to PDF functionality
+			document.addEventListener('DOMContentLoaded', function() {
+				const exportBtn = document.getElementById('exportPdfBtn');
+				if (exportBtn) {
+					exportBtn.addEventListener('click', function() {
+						window.print();
+					});
+				}
+			});
 		script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
 		script(src="/assets/index-dist.js")
 		block scripts

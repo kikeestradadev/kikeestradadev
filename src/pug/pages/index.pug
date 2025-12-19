@@ -1,14 +1,17 @@
 extends ../config/template 
 append config
 	-currentPage		= "home"
-	-siteName			= 'site'
-	-content			= 'content'
-	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+	-siteName			= 'Enrique Estrada - Portfolio'
+	-content			= 'Senior Front-End Developer & UI/UX Engineer'
+	-pageDescription	= 'Senior Front-End Developer & UI/UX Engineer with over a decade of experience building fast, scalable, and user-centered interfaces for high-traffic platforms.'
 block main-header
-block main-container
-	section(class="main-container border border-[steelblue]") 
-		div(class="container  border border-[tomato]") 
-			h1(class="text-6xl font-bold") Boilerplate
-	include ../style-guide/style-guide
+	include ../modules/top-nav-title
+block main-container 
+	include ../modules/profile
+	include ../modules/skills
+	include ../modules/work-experience
+	include ../modules/portfolio
+	
 block main-footer
+	include ../modules/footer
 block scripts

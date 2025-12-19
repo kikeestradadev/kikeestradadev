@@ -14,7 +14,11 @@ export default {
 			'xl': '1600px',
 			'xxl': '1920px',
 		},
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ['Montserrat', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [],
 	future: {
