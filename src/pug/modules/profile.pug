@@ -1,15 +1,27 @@
-div(class="main-container bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/20")
+div(class="main-container bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/20" id="about")
 	div(class="container")
 		div(class="py-8 lg:py-16")
 			div(class="flex flex-col flex-wrap items-start gap-4 mb-8")
-				h2(class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[var(--base-color)] to-blue-600 bg-clip-text") Profile
+				h2(class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[var(--base-color)] to-blue-600 bg-clip-text") About
 				div(class="flex flex-wrap gap-2")
 					span(class="px-4 py-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow duration-300") Visa EUA
 					span(class="px-4 py-1.5 bg-gradient-to-r from-green-500 to-green-600 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow duration-300") Visa Canada	
 		div(class="prose prose-lg max-w-none")
 			div(class="bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/30 rounded-xl shadow-lg p-6 lg:p-8 mb-6 border-l-4 border-[var(--base-color)] hover:shadow-xl transition-shadow duration-300 backdrop-blur-sm")
-				p(class="text-gray-700 leading-relaxed mb-4") Senior Front-End Developer & UI/UX Engineer with over 10 years of experience building scalable, high-performance web applications and design systems for production environments.
-				p(class="text-gray-700 leading-relaxed mb-4") I specialize in modern JavaScript frameworks such as React, Remix, and Vue, as well as headless CMS architectures and custom WordPress solutions, with a strong focus on clean UI, usability, performance, accessibility, and long-term maintainability.
-				p(class="text-gray-700 leading-relaxed mb-4") I've led and delivered projects across industries including sports betting, gaming, and marketing platforms, collaborating closely with designers, product teams, stakeholders, and distributed teams to turn complex requirements into reliable, user-centered products.
-				p(class="text-gray-700 leading-relaxed mb-4") I stay up to date with AI-powered development and design tools (such as AI-assisted coding, design automation, and productivity workflows) to improve code quality, speed up iteration, and enhance user experiences—while always applying strong engineering judgment and best practices.
-				p(class="text-gray-700 leading-relaxed") My background combines hands-on front-end development, UX/UI design, and a strong attention to detail, allowing me to consistently deliver intuitive, scalable, and production-ready interfaces.
+				//- Versión concisa y escaneable
+				div(class="space-y-4")
+					p(class="text-gray-700 leading-relaxed font-medium") Senior Front-End Developer & UI/UX Engineer with 10+ years building scalable, high-performance web applications for production environments.
+					
+					div(class="border-l-4 border-[var(--base-color)]/30 pl-4 space-y-2")
+						p(class="text-gray-700 leading-relaxed")
+							strong(class="text-[var(--base-color)]") Specialized in: 
+							| React, Remix, TypeScript, Headless CMS (Strapi), Custom WordPress solutions
+						p(class="text-gray-700 leading-relaxed")
+							strong(class="text-[var(--base-color)]") Focus areas: 
+							| Performance optimization, clean UI, accessibility, maintainability
+						p(class="text-gray-700 leading-relaxed")
+							strong(class="text-[var(--base-color)]") Industries: 
+							| Sports betting, gaming, SaaS platforms
+					
+					div(class="pt-2")
+						p(class="text-gray-600 text-sm italic") AI-assisted development (Cursor, ChatGPT) for faster debugging, refactoring, and improved delivery speed while maintaining code quality standards.
