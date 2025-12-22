@@ -20,9 +20,9 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="./tailwind-dist.css")
 		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
-	body(class=`${currentPage} bg-gray-50 flex flex-col min-h-screen`, itemscope itemtype="http://schema.org/WebPage")
+	body(class=`${currentPage} bg-gradient-to-br from-blue-50 via-indigo-50/30 to-purple-50/20 flex flex-col min-h-screen`, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
-		header(class='w-full min-h-[var(--header-height)] flex items-center border-b border-[var(--base-color)]/30')
+		header(class='w-full flex items-center border-b border-[var(--base-color)]/20 shadow-sm')
 			block main-header
 		//- here ends the Main Header
 		//- here start the Main Container
