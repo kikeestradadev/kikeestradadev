@@ -19,15 +19,6 @@
 			src: ''
 		},
 		{
-			title: 'Godds',
-			live: 'https://godds.com/',
-			image: 'images/pf/godds.png',
-			role: 'Senior Front-End Lead',
-			tech: 'Wordpress',
-			focus: 'High-traffic affiliate site, performance optimization, cross-browser compatibility',
-			src: ''
-		},
-		{
 			title: 'Crypto Tutorials',
 			live: 'https://crypto-tutorials.com/',
 			image: 'images/pf/crypto.png',
@@ -44,43 +35,6 @@
 			tech: 'Wordpress',
 			focus: 'Enterprise sportsbook UI, accessibility (WCAG), multi-brand consistency',
 			src: ''
-		},
-		//- --- Virtual exercises (curated: unique technical value) ---
-		{
-			title: 'CSS Vars Practice',
-			live: 'https://kikeestrada.github.io/portfolio-css-vars-theme/index.html',
-			image: 'images/pf/pf_cssvars.png',
-			role: 'Virtual Exercise',
-			tech: 'CSS Variables',
-			focus: 'Design tokens, theming, CSS custom properties, dark/light mode',
-			src: 'https://github.com/kikeestrada/portfolio-css-vars-theme'
-		},
-		{
-			title: 'Vanilla JS API Fetch',
-			live: 'https://kikeestrada.github.io/portfolioVanillaJsApiFetch/',
-			image: 'images/pf/pf_vanilla_api_fetch.png',
-			role: 'Virtual Exercise',
-			tech: 'Vanilla JS, Node.js',
-			focus: 'Fetch API, async patterns, error handling, loading states',
-			src: 'https://github.com/kikeestrada/portfolioVanillaJsApiFetch'
-		},
-		{
-			title: 'My PWA',
-			live: 'https://kikeestrada.github.io/my-pwa/',
-			image: 'images/pf/pf_pwa.png',
-			role: 'Virtual Exercise',
-			tech: 'Vanilla JS, Node.js',
-			focus: 'Progressive Web App, service workers, offline-first, manifest',
-			src: 'https://github.com/kikeestrada/my-pwa'
-		},
-		{
-			title: 'React Shopping Card',
-			live: 'https://kikeestrada.github.io/portfolioReactShopingCart/',
-			image: 'images/pf/pf_shopping_card.png',
-			role: 'Virtual Exercise',
-			tech: 'React',
-			focus: 'React state management, cart logic, component composition',
-			src: 'https://kikeestrada.github.io/portfolioReactShopingCart/'
 		}
 	]
 
@@ -89,7 +43,7 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 		div(class="mb-12 text-center")
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Portfolio
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-		div(class="grid grid-cols-1 m:grid-cols-2 l:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6")
+		div(class="grid grid-cols-1 m:grid-cols-2 l:grid-cols-3 lg:grid-cols-4 gap-6")
 			each item in portfolioItems
 				- var hasLive = item.live && typeof item.live === 'string' && item.live.trim() !== '';
 				- var hasSrc = item.src && typeof item.src === 'string' && item.src.trim() !== '';
