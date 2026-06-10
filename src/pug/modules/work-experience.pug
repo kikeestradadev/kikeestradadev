@@ -4,71 +4,12 @@ div(class="main-container bg-gradient-to-br from-indigo-50/40 via-purple-50/30 t
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Work Experience
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
 		div(class="space-y-12")
-		
-		
 			include ./work-experience/trigal-media.pug
 			include ./work-experience/brand-builders.pug
 			include ./work-experience/prevent-security.pug
 			include ./work-experience/assemble.pug
 			include ./work-experience/accenture.pug
 			include ./work-experience/business-solutions.pug
-			include ./work-experience/prime-ideas.pug			
+			include ./work-experience/prime-ideas.pug
 			include ./work-experience/double-digit.pug
 			include ./work-experience/experian.pug
-
-script.
-	document.addEventListener('DOMContentLoaded', function() {
-		const expandButtons = document.querySelectorAll('.expand-btn');
-		
-		expandButtons.forEach(button => {
-			button.addEventListener('click', function() {
-				const targetId = this.getAttribute('data-target');
-				const content = document.getElementById(targetId);
-				const expandText = this.querySelector('.expand-text');
-				const expandIcon = this.querySelector('.expand-icon');
-				
-				// Cerrar todos los demás collapses primero
-				expandButtons.forEach(otherButton => {
-					if (otherButton !== this) {
-						const otherTargetId = otherButton.getAttribute('data-target');
-						const otherContent = document.getElementById(otherTargetId);
-						const otherExpandText = otherButton.querySelector('.expand-text');
-						const otherExpandIcon = otherButton.querySelector('.expand-icon');
-						
-						if (otherContent && !otherContent.classList.contains('hidden')) {
-							otherContent.classList.add('hidden');
-							if (otherExpandText) {
-								otherExpandText.textContent = 'See More';
-							}
-							if (otherExpandIcon) {
-								otherExpandIcon.classList.remove('rotate-180');
-							}
-						}
-					}
-				});
-				
-				// Ahora manejar el collapse actual
-				if (content) {
-					if (content.classList.contains('hidden')) {
-						// Abrir
-						content.classList.remove('hidden');
-						if (expandText) {
-							expandText.textContent = 'See less';
-						}
-						if (expandIcon) {
-							expandIcon.classList.add('rotate-180');
-						}
-					} else {
-						// Cerrar
-						content.classList.add('hidden');
-						if (expandText) {
-							expandText.textContent = 'See More';
-						}
-						if (expandIcon) {
-							expandIcon.classList.remove('rotate-180');
-						}
-					}
-				}
-			});
-		});
-	});
