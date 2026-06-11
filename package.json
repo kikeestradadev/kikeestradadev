@@ -9,7 +9,7 @@
 		"deploy": "gh-pages -d public"
 	},
 	"dependencies": {
-		"caniuse-lite": "^1.0.30001788",
+		"caniuse-lite": "^1.0.30001799",
 		"gh-pages": "^6.3.0",
 		"update-browserslist-db": "^1.1.2"
 	},
@@ -24,8 +24,8 @@
 		"url": "https://github.com/kikeestradadev/kikeestradadev/issues"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/typography": "^0.5.20",
 		"jstransformer-markdown-it": "^3.0.0",
-		"tailwindcss": "^4.2.4"
+		"tailwindcss": "^4.3.0"
 	}
 }

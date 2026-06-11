@@ -2,15 +2,17 @@ extends ../config/template
 append config
 	-currentPage		= "Resume"
 	-siteName			= 'Enrique Estrada'
-	-content			= 'Senior Frontend Engineer · React & TypeScript'
-	-pageDescription	= 'Senior Frontend Engineer with 10+ years leading teams on high-traffic ecommerce platforms. React, TypeScript, WordPress, experimentation, and performance optimization.'
+	-content			= 'Frontend Architect & Technical Leader'
+	-pageDescription	= 'Frontend Architect and Technical Leader with 14+ years building scalable React ecosystems, enterprise platforms, and high-traffic digital products. Engineering leadership, frontend architecture, performance optimization, design systems, and accessibility.'
 block main-header
 	include ../modules/top-nav-title
 block main-container 
+	include ../modules/career-highlights
 	include ../modules/profile
+	include ../modules/industries
 	include ../modules/skills
+	include ../modules/work-experience
 	include ../modules/portfolio
-	include ../modules/work-experience		
 block main-footer
 	include ../modules/footer
 block scripts

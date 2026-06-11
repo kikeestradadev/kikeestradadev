@@ -1,0 +1,9 @@
+div(class="main-container bg-gradient-to-br from-indigo-50/30 via-blue-50/20 to-white" id="industries")
+	div(class="container py-10 lg:py-12")
+		div(class="mb-8 text-center")
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Industries
+			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
+		div(class="grid grid-cols-2 m:grid-cols-3 lg:grid-cols-6 gap-4")
+			each industry in ['Sports Betting & Gaming', 'SaaS Platforms', 'Healthcare', 'Banking & Financial Services', 'Ecommerce', 'Marketing Technology']
+				div(class="bg-white rounded-lg shadow-sm border border-gray-200/80 px-4 py-5 text-center hover:shadow-md hover:border-[var(--base-color)]/30 transition-all duration-300")
+					p(class="text-sm font-semibold text-gray-800 leading-snug")= industry

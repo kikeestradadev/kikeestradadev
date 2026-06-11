@@ -1,118 +1,74 @@
-div(class="main-container py-12 lg:py-16 bg-gradient-to-br from-cyan-50/40 via-blue-50/30 to-indigo-50/20" id="skills")
+div(class="main-container py-12 lg:py-16 bg-white" id="skills")
 	div(class="container")
 		div(class="mb-10 text-center")
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Technical Skills
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-		div(class="grid grid-cols-1 m:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6")
-			//- Frontend Development
-			div(class="bg-gradient-to-br from-white via-blue-50/40 to-cyan-50/30 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-blue-500 backdrop-blur-sm")
-				h3(class="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2")
-					span(class="w-1 h-6 bg-blue-500 rounded")
-					| Frontend Development
-				ul(class="space-y-3")
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span React, Next.js (SSR, SSG, ISR, App Router), Remix
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span State management (Redux, Zustand, React Context)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span Modern JavaScript (ES6+, Async/Await, Closures, Event Loop)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span Advanced CSS (Flexbox, Grid, Animations, Custom Properties, Semantic HTML, BEM, design tokens)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span Performance (Code Splitting, Lazy Loading, Core Web Vitals, virtualization for large lists, memory leak prevention)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span Accessibility (WCAG 2.1, ADA, Section 508, keyboard navigation, focus management, ARIA)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-blue-500 mt-0.5") •
-						span SEO & Web Best Practices 
-					
-			
-			//- UI/UX Design
-			div(class="bg-gradient-to-br from-white via-purple-50/40 to-pink-50/30 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-purple-500 backdrop-blur-sm")
-				h3(class="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2")
-					span(class="w-1 h-6 bg-purple-500 rounded")
-					| UI/UX Design
-				ul(class="space-y-3")
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-purple-500 mt-0.5") •
-						span Design systems & component libraries
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-purple-500 mt-0.5") •
-						span End-to-end application design & UX architecture 
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-purple-500 mt-0.5") •
-						span User research (interviews, usability testing, heuristic evaluation)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-purple-500 mt-0.5") •
-						span Design-to-code translation
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-purple-500 mt-0.5") •
-						span Tools: Figma, Adobe XD, Balsamiq, Sketch
-			
-			//- Development Tools
-			div(class="bg-gradient-to-br from-white via-green-50/40 to-emerald-50/30 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-green-500 backdrop-blur-sm")
-				h3(class="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2")
-					span(class="w-1 h-6 bg-green-500 rounded")
-					| Development Tools
-				ul(class="space-y-3")
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Testing (Jest, React Testing Library, Cypress, unit & integration tests)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Data fetching (React Query, TanStack Query, SWR, resilient patterns)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Git & GitHub (branching, workflows, CI/CD)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Modern build tools (Vite, Webpack)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Node.js-based tooling
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span WordPress (custom themes & plugins)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Laravel framework
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Headless CMS (Strapi)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span REST APIs & GraphQL (retries, error boundaries)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span Storybook (component docs, visual regression)
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-green-500 mt-0.5") •
-						span SQL databases (MySQL)
-			
-			//- Professional Skills
-			div(class="bg-gradient-to-br from-white via-orange-50/40 to-amber-50/30 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-orange-500 backdrop-blur-sm")
-				h3(class="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2")
-					span(class="w-1 h-6 bg-orange-500 rounded")
-					| Professional Skills
-				ul(class="space-y-3")
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-orange-500 mt-0.5") •
-						span Agile / Scrum environments 
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-orange-500 mt-0.5") •
-						span Cross-team & async communication 
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-orange-500 mt-0.5") •
-						span Troubleshooting & root-cause analysis 
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-orange-500 mt-0.5") •
-						span Security & scalability awareness 
-					li(class="text-gray-700 flex items-start gap-2")
-						span(class="text-orange-500 mt-0.5") •
-						span AI tools for productivity and development 
+		div(class="grid grid-cols-1 m:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6")
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Frontend Development
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li React
+					li TypeScript
+					li JavaScript
+					li Next.js
+					li Remix
+					li Astro
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Frontend Architecture
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li SSR · SSG · ISR
+					li Component libraries
+					li Design systems
+					li Micro frontends
+					li Scalable UI architecture
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") State Management & Data
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li React Query · TanStack Query
+					li Redux
+					li Zustand
+					li Context API
+					li SWR
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Performance Optimization
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li Core Web Vitals
+					li Code splitting
+					li Lazy loading
+					li Performance audits
+					li Bundle optimization
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Accessibility
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li WCAG 2.1 · ADA · Section 508
+					li ARIA
+					li Keyboard navigation
+					li Focus management
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") CMS & Platforms
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li WordPress · Gutenberg
+					li Headless CMS
+					li Strapi
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Backend Integration
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li REST APIs
+					li GraphQL
+					li Laravel
+					li Node.js
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Testing
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li Jest
+					li React Testing Library
+					li Cypress
+					li Unit & integration testing
+			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
+				h3(class="text-lg font-bold mb-4 text-gray-900") Leadership
+				ul(class="space-y-2 text-gray-700 text-sm flex-1")
+					li Agile · Scrum
+					li Team leadership · Engineering leadership
+					li Mentoring
+					li Cross-functional collaboration
+					li Technical reviews & planning
