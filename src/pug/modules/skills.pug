@@ -1,74 +1,51 @@
-div(class="main-container py-12 lg:py-16 bg-white" id="skills")
+-
+	const skillCategories = [
+		{
+			title: 'Frontend Development',
+			items: ['React', 'TypeScript', 'JavaScript', 'Next.js', 'Remix', 'Astro']
+		},
+		{
+			title: 'Frontend Architecture',
+			items: ['SSR · SSG · ISR', 'Component libraries', 'Design systems', 'Micro frontends', 'Scalable UI architecture']
+		},
+		{
+			title: 'State Management & Data',
+			items: ['React Query · TanStack Query', 'Redux', 'Zustand', 'Context API', 'SWR']
+		},
+		{
+			title: 'Performance Optimization',
+			items: ['Core Web Vitals', 'Code splitting', 'Lazy loading', 'Performance audits', 'Bundle optimization']
+		},
+		{
+			title: 'Accessibility',
+			items: ['WCAG 2.1 · ADA · Section 508', 'ARIA', 'Keyboard navigation', 'Focus management']
+		},
+		{
+			title: 'CMS & Platforms',
+			items: ['WordPress · Gutenberg', 'Headless CMS', 'Strapi']
+		},
+		{
+			title: 'Backend Integration',
+			items: ['REST APIs', 'GraphQL', 'Laravel', 'Node.js']
+		},
+		{
+			title: 'Testing',
+			items: ['Jest', 'React Testing Library', 'Cypress', 'Unit & integration testing']
+		},
+		{
+			title: 'Leadership',
+			items: ['Agile · Scrum', 'Team leadership · Engineering leadership', 'Mentoring', 'Cross-functional collaboration', 'Technical reviews & planning']
+		}
+	]
+
+div(class="main-container py-10 lg:py-12 bg-white" id="skills")
 	div(class="container")
-		div(class="mb-10 text-center")
+		div(class="mb-6 lg:mb-8 text-center")
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Technical Skills
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-		div(class="grid grid-cols-1 m:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6")
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Frontend Development
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li React
-					li TypeScript
-					li JavaScript
-					li Next.js
-					li Remix
-					li Astro
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Frontend Architecture
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li SSR · SSG · ISR
-					li Component libraries
-					li Design systems
-					li Micro frontends
-					li Scalable UI architecture
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") State Management & Data
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li React Query · TanStack Query
-					li Redux
-					li Zustand
-					li Context API
-					li SWR
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Performance Optimization
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li Core Web Vitals
-					li Code splitting
-					li Lazy loading
-					li Performance audits
-					li Bundle optimization
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Accessibility
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li WCAG 2.1 · ADA · Section 508
-					li ARIA
-					li Keyboard navigation
-					li Focus management
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") CMS & Platforms
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li WordPress · Gutenberg
-					li Headless CMS
-					li Strapi
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Backend Integration
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li REST APIs
-					li GraphQL
-					li Laravel
-					li Node.js
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Testing
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li Jest
-					li React Testing Library
-					li Cypress
-					li Unit & integration testing
-			div(class="bg-white rounded-xl shadow-sm p-6 lg:p-7 hover:shadow-md transition-shadow duration-300 border border-gray-200/80 border-l-4 border-l-[var(--base-color)] h-full flex flex-col")
-				h3(class="text-lg font-bold mb-4 text-gray-900") Leadership
-				ul(class="space-y-2 text-gray-700 text-sm flex-1")
-					li Agile · Scrum
-					li Team leadership · Engineering leadership
-					li Mentoring
-					li Cross-functional collaboration
-					li Technical reviews & planning
+		div(class="rounded-xl border border-gray-200/80 bg-slate-50/50 p-5 sm:p-6 lg:p-8")
+			div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5 lg:gap-y-6")
+				each category in skillCategories
+					div
+						h3(class="text-sm font-bold text-[var(--base-color)] mb-1.5 leading-snug")= category.title
+						p(class="text-sm text-gray-700 leading-relaxed")= category.items.join(' · ')
