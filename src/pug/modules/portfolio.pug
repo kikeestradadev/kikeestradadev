@@ -71,9 +71,6 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 						a(href=item.live target="_blank" rel="noopener noreferrer" class="block relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 aspect-video cursor-pointer")
 							img(src=imageUrl alt=item.title class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500")
 							div(class="absolute inset-0 bg-gradient-to-br from-[var(--base-color)]/0 via-[var(--base-color)]/0 to-[var(--base-color)]/0 group-hover:from-[var(--base-color)]/10 group-hover:via-[var(--base-color)]/15 group-hover:to-[var(--base-color)]/20 transition-all duration-300")
-							if item.tech
-								div(class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300")
-									span(class="px-2 py-1 bg-[var(--base-color)]/90 backdrop-blur-sm text-white text-xs font-semibold rounded-md shadow-lg")= item.tech.split('+')[0].trim()
 						div(class="p-4 sm:p-5 bg-gradient-to-b from-transparent to-white/50")
 							h3(class="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
 							if item.role || item.tech || item.achievements
