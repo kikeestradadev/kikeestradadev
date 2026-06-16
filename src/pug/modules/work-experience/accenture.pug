@@ -1,33 +1,38 @@
 //- Accenture
+include ../../mixins/employment-date
 div
-	div(class="bg-gradient-to-br from-white to-gray-50/50 rounded-xl shadow-lg p-6 lg:p-8 border-l-4 border-[var(--base-color)]/60 hover:border-[var(--base-color)] hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 group backdrop-blur-sm")
+	div(class="bg-gradient-to-br from-white to-gray-50/50 rounded-xl shadow-lg ring-1 ring-[var(--base-color)]/10 p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl transition-shadow duration-300 group backdrop-blur-sm")
 		div(class="flex flex-col m:flex-row m:items-start m:justify-between mb-4 gap-3")
 			div(class="flex-1")
 				h3(class="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-[var(--base-color)] transition-colors mb-2") Accenture
+				div(class="flex flex-wrap gap-1.5 mb-2")
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Citi
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Wells Fargo
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Salesforce Marketing Cloud
 				h4(class="text-lg font-semibold text-[var(--base-color)] mb-3") Web Developer Senior Analyst
 			div(class="flex-shrink-0")
-				span(class="inline-block px-4 py-2 bg-gradient-to-r from-[var(--base-color)]/10 to-blue-500/10 text-[var(--base-color)] text-sm font-semibold rounded-lg border border-[var(--base-color)]/20 whitespace-nowrap") Jan 2020 - Feb 2023
+				+employmentDate('Jan 2020 - Feb 2023', '3 yrs 1 mo')
 		div(class="space-y-4")
 			div
 				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Role Overview
 				p(class="text-gray-700 leading-relaxed text-base")
-					| Email and front-end developer on a 15-person enterprise marketing team, building high-volume campaigns for U.S. banking clients on Salesforce Marketing Cloud — contributing to scalable systems and cross-functional delivery standards.
-			div
+					| Supported enterprise marketing operations for major U.S. banking clients including Citi and Wells Fargo through scalable Salesforce Marketing Cloud workflows and reusable email architecture on a 15-person team — improving campaign production efficiency under compliance-sensitive requirements.
+			div(class="space-y-3")
 				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Key Achievements
-				ul(class="space-y-2 list-none text-gray-700 text-base")
+				ul(class="space-y-2.5 list-none text-gray-700 text-base")
+					li(class="flex items-start gap-2")
+						span(class="text-[var(--base-color)] font-bold shrink-0") •
+						span(class="font-semibold text-gray-900 leading-snug") Supported enterprise email programs for Citi, Wells Fargo, and other U.S. banking clients through compliance-sensitive Salesforce Marketing Cloud operations
+					li(class="flex items-start gap-2")
+						span(class="text-[var(--base-color)] font-bold shrink-0") •
+						span(class="font-semibold text-gray-900 leading-snug") Built a Node.js component-driven email bundle that substantially increased team campaign output and reduced repetitive build work
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold") •
-						span Delivered enterprise email campaigns for Citi, Wells Fargo, and other U.S. banking clients
+						span Standardized campaign workflows to improve cross-client compatibility and QA turnaround across concurrent programs
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold") •
-						span Built a Node.js component-driven email bundle that increased team output by 50%
-					li(class="flex items-start gap-2")
-						span(class="text-[var(--base-color)] font-bold") •
-						span Standardized campaign workflows and improved cross-client compatibility and QA speed
-					li(class="flex items-start gap-2")
-						span(class="text-[var(--base-color)] font-bold") •
-						span Trained junior developers and cross-department teams on Marketing Cloud best practices
-			p(class="text-sm text-gray-700")
+						span Mentored junior developers and trained cross-department teams on Marketing Cloud workflows and front-end standards
+			p(class="text-sm text-gray-700 mt-5 pt-4 border-t border-gray-100")
 				span(class="font-semibold text-[var(--base-color)]") Stack:
 				|  Salesforce Marketing Cloud · AMPscript · HTML · CSS · JavaScript · Node.js
 		div(class="mt-3 pt-3 border-t border-gray-200 flex flex-col gap-2")
