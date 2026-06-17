@@ -1,0 +1,43 @@
+-
+	const caseStudies = [
+		{
+			title: 'AI-Assisted Product Development',
+			subtitle: 'Trigal Media · Senior Web Developer Lead · Sep 2025 – Current',
+			challenge: 'A startup needed practical MVPs with AI capabilities across legal, healthcare, education, and SMB use cases — with a small, junior-heavy team and tight delivery cycles.',
+			solution: 'Provided frontend architecture leadership and hands-on delivery using React, Next.js, Astro, and TypeScript, integrating AI APIs and RAG-based workflows while establishing reusable frontend patterns and code review standards.',
+			technologies: 'React · Next.js · Astro · TypeScript · WordPress · Laravel · AI APIs · RAG · AI-Assisted Development',
+			impact: 'Enabled faster MVP delivery through reusable architecture, improved team consistency via mentoring and standards, and maintainable AI-enabled product foundations.'
+		},
+		{
+			title: 'BetAnySports Platform Modernization',
+			subtitle: 'BetUS / BetAnything · Senior Web Developer Lead · Aug 2021 – Aug 2025',
+			challenge: 'A multi-brand sportsbook environment needed frontend modernization across WordPress properties and a high-traffic BetAnything.eu platform, including a planned 12-month rebrand and migration.',
+			solution: 'Owned frontend architecture for BetAnything.eu on React, Remix, and Strapi; delivered custom WordPress implementations across affiliate and media properties; established Jest, React Testing Library, and Cypress standards.',
+			technologies: 'React · Remix · TypeScript · Strapi · WordPress · PHP · Laravel · Jest · Cypress',
+			impact: 'Completed a planned 12-month platform rebrand and migration in 6 months (~50% faster); improved Core Web Vitals, maintainability, and publishing workflows; reduced production defects before release.'
+		}
+	]
+
+div(class="main-container bg-gradient-to-br from-slate-50/80 via-white to-blue-50/30" id="featured-projects")
+	div(class="container py-10 lg:py-14")
+		div(class="mb-8 text-center")
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Featured Technical Projects
+			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
+		div(class="grid grid-cols-1 lg:grid-cols-2 gap-6")
+			each study in caseStudies
+				div(class="bg-white rounded-xl shadow-lg ring-1 ring-[var(--base-color)]/10 p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl transition-shadow duration-300")
+					h3(class="text-xl font-bold text-gray-900 mb-1")= study.title
+					p(class="text-sm text-[var(--base-color)] font-medium mb-4")= study.subtitle
+					div(class="space-y-3 text-sm text-gray-700")
+						div
+							p(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide mb-1") Challenge
+							p(class="leading-relaxed")= study.challenge
+						div
+							p(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide mb-1") Solution
+							p(class="leading-relaxed")= study.solution
+						div
+							p(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide mb-1") Technologies
+							p(class="leading-relaxed font-medium text-gray-800")= study.technologies
+						div
+							p(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide mb-1") Business Impact
+							p(class="leading-relaxed")= study.impact

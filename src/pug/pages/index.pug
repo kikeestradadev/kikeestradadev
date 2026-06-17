@@ -2,14 +2,19 @@ extends ../config/template
 append config
 	-currentPage		= "Resume"
 	-siteName			= 'Enrique Estrada'
-	-content			= 'Senior Frontend Architect & Technical Lead'
-	-pageDescription	= 'Senior Frontend Architect and Technical Lead with 15+ years building scalable React, WordPress, and Headless CMS platforms, leading engineering teams, and delivering high-traffic digital products.'
+	-content			= 'Senior Frontend Engineer & Technical Lead'
+	-pageDescription	= 'Senior Frontend Engineer and Technical Lead with 18+ years building scalable React, TypeScript, Next.js, and WordPress platforms, leading engineering teams, and delivering high-traffic digital products with AI-assisted development workflows.'
 block main-header
 	include ../modules/top-nav-title
 block main-container 
+	include ../modules/professional-impact
 	include ../modules/career-highlights
+	include ../modules/core-specializations
 	include ../modules/skills
 	include ../modules/work-experience
+	include ../modules/featured-case-studies
+	//- TODO: Re-enable Professional References when verified LinkedIn recommendations or client quotes are available.
+	//- include ../modules/professional-references
 	include ../modules/portfolio
 block main-footer
 	include ../modules/footer

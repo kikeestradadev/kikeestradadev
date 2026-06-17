@@ -6,11 +6,9 @@
 			image: 'images/pf/bet.png',
 			role: 'Senior Frontend Lead',
 			tech: 'React + Remix + Strapi',
-			achievements: [
-				'High-traffic sportsbook platform',
-				'Headless CMS architecture',
-				'Performance optimization'
-			],
+			businessGoal: 'Support a high-traffic, multi-brand sportsbook experience with a modern, maintainable frontend platform.',
+			technicalSolution: 'Led frontend architecture using React, Remix, and Strapi with headless CMS integration and performance-focused delivery patterns.',
+			outcome: 'Improved maintainability, publishing workflows, and scalable delivery for a production sportsbook property.',
 			src: ''
 		},
 		{
@@ -19,12 +17,9 @@
 			image: 'images/pf/insiders.png',
 			role: 'Senior Frontend Lead',
 			tech: 'WordPress',
-			achievements: [
-				'SEO-driven publishing platform',
-				'Custom WordPress architecture',
-				'Editorial scalability',
-				'Responsive multi-device delivery'
-			],
+			businessGoal: 'Scale SEO-driven sports media content across a multi-brand publishing property.',
+			technicalSolution: 'Delivered custom WordPress architecture and responsive publishing workflows for editorial teams.',
+			outcome: 'Improved editorial scalability and production-ready content delivery.',
 			src: ''
 		},
 		{
@@ -33,12 +28,9 @@
 			image: 'images/pf/crypto.png',
 			role: 'Senior Frontend Lead',
 			tech: 'React',
-			achievements: [
-				'React SPA with API integration',
-				'Component-based architecture',
-				'State management for dynamic content',
-				'Production-ready marketing site'
-			],
+			businessGoal: 'Launch a content-focused marketing product with dynamic, API-driven information delivery.',
+			technicalSolution: 'Built a React-based site with component architecture and API-driven dynamic content.',
+			outcome: 'Delivered a production-ready marketing platform with scalable content delivery.',
 			src: ''
 		},
 		{
@@ -47,11 +39,9 @@
 			image: 'images/pf/mb.png',
 			role: 'Senior Frontend Lead',
 			tech: 'WordPress · PHP · JavaScript',
-			achievements: [
-				'Enterprise sportsbook ecosystem',
-				'Accessibility-focused implementation',
-				'Multi-brand consistency'
-			],
+			businessGoal: 'Maintain consistent, accessible frontend delivery across enterprise sportsbook properties.',
+			technicalSolution: 'Contributed WordPress, PHP, and JavaScript frontend work within a multi-brand sportsbook ecosystem.',
+			outcome: 'Supported accessibility-focused implementation and multi-brand consistency across high-traffic properties.',
 			src: ''
 		}
 	]
@@ -73,7 +63,7 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 							div(class="absolute inset-0 bg-gradient-to-br from-[var(--base-color)]/0 via-[var(--base-color)]/0 to-[var(--base-color)]/0 group-hover:from-[var(--base-color)]/10 group-hover:via-[var(--base-color)]/15 group-hover:to-[var(--base-color)]/20 transition-all duration-300")
 						div(class="p-4 sm:p-5 bg-gradient-to-b from-transparent to-white/50")
 							h3(class="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
-							if item.role || item.tech || item.achievements
+							if item.role || item.tech || item.businessGoal
 								div(class="hidden sm:block space-y-2.5 mb-5")
 									if item.role
 										div(class="flex items-start gap-2")
@@ -83,14 +73,18 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 										div(class="flex items-start gap-2 flex-wrap")
 											span(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide min-w-[72px]") Stack:
 											span(class="text-sm text-gray-700 font-medium")= item.tech
-									if item.achievements && item.achievements.length
+									if item.businessGoal
 										div(class="flex items-start gap-2")
-											span(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide min-w-[72px] pt-0.5") Impact:
-											ul(class="text-sm text-gray-700 space-y-1 list-none flex-1")
-												each achievement in item.achievements
-													li(class="flex items-start gap-1.5")
-														span(class="text-[var(--base-color)] font-bold") •
-														span= achievement
+											span(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide min-w-[72px] pt-0.5") Goal:
+											span(class="text-sm text-gray-700 flex-1")= item.businessGoal
+									if item.technicalSolution
+										div(class="flex items-start gap-2")
+											span(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide min-w-[72px] pt-0.5") Solution:
+											span(class="text-sm text-gray-700 flex-1")= item.technicalSolution
+									if item.outcome
+										div(class="flex items-start gap-2")
+											span(class="text-xs font-semibold text-[var(--base-color)] uppercase tracking-wide min-w-[72px] pt-0.5") Outcome:
+											span(class="text-sm text-gray-700 flex-1")= item.outcome
 							div(class="hidden sm:block mb-4 border-t border-gray-200")
 							div(class="flex flex-col gap-2 sm:gap-2.5")
 								a(href=item.live target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--base-color)]/5 to-blue-500/5 hover:from-[var(--base-color)]/10 hover:to-blue-500/10 text-xs sm:text-sm text-gray-700 hover:text-[var(--base-color)] rounded-lg transition-all duration-300 border border-[var(--base-color)]/10 hover:border-[var(--base-color)]/30 group/link")

@@ -1,0 +1,18 @@
+-
+	const impactMetrics = [
+		{ value: '18+', label: 'Years Experience' },
+		{ value: '10+', label: 'Engineers Led' },
+		{ value: '50%', label: 'Faster MVP Delivery' },
+		{ value: 'Enterprise', label: 'Platforms Delivered' }
+	]
+
+div(class="main-container bg-white border-b border-gray-100" id="professional-impact" aria-label="Professional impact metrics")
+	div(class="container py-8 lg:py-10")
+		div(class="mb-6 text-center")
+			h2(class="text-2xl lg:text-3xl font-bold text-[var(--base-color)] mb-3") Professional Impact
+			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
+		div(class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4")
+			each metric in impactMetrics
+				div(class="rounded-xl shadow-md border border-gray-200/80 bg-slate-50/50 p-4 lg:p-5 text-center hover:shadow-lg transition-shadow duration-300")
+					p(class="text-2xl lg:text-3xl font-bold text-[var(--base-color)] mb-1")= metric.value
+					p(class="text-xs sm:text-sm text-gray-600 font-medium")= metric.label
