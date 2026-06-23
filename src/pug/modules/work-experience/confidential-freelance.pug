@@ -1,4 +1,5 @@
 //- Confidential - Freelancer
+include ../../mixins/stack-badges
 div
 	div(class="bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/20 rounded-xl shadow-lg p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 group backdrop-blur-sm")
 		div(class="flex flex-col m:flex-row m:items-start m:justify-between mb-4 gap-3")
@@ -36,7 +37,4 @@ div
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold mt-0.5") •
 						span Writing unit and integration tests (Jest, React Testing Library) to ensure component reliability and reduce regression risk
-				div(class="mt-3 pt-3 border-t border-gray-200")
-					span(class="text-sm font-semibold text-[var(--base-color)]") Core stack: 
-					span(class="text-sm text-gray-600") React, Astro, WordPress, TypeScript, Tailwind
-
+				+stackBadges(['React', 'Astro', 'WordPress', 'TypeScript', 'Tailwind'])

@@ -1,42 +1,38 @@
 div(class="main-container bg-[var(--base-color)]")
 	div(class="container py-10 sm:py-12 lg:py-14")
-		div(class="flex flex-col lg:flex-row lg:gap-10 xl:gap-14 lg:items-start")
+		div(class="flex flex-col lg:flex-row gap-12 lg:gap-16 lg:items-start")
 			div(class="flex-1 min-w-0 text-center lg:text-left")
 				h1(class="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold mb-3 text-white tracking-tight") Enrique Estrada
 				p(class="text-base sm:text-lg lg:text-2xl font-semibold text-white mb-2 leading-snug")
 					| Senior Frontend Engineer & Technical Lead
 				p(class="text-xs sm:text-sm text-white/75 mb-4 font-medium tracking-wide")
 					| React Ecosystem · Frontend Architecture · Technical Leadership · AI-Assisted Development · Enterprise Platforms
-				p(class="text-xs sm:text-sm text-white/90 mb-3 font-semibold")
-					| Open to remote opportunities · Actively seeking remote roles · Based in Costa Rica
 				p(class="text-sm lg:text-lg text-white/95 leading-relaxed mb-2 lg:mb-3")
 					| Senior Frontend Engineer and Technical Lead with 18+ years building high-traffic React ecosystem platforms across gaming, banking, ecommerce, and enterprise environments. I own frontend architecture and technical leadership — delivering enterprise platforms through AI-assisted development and hands-on engineering standards.
 				include metrics-bar
 				include impact-snapshot
 			div(class="w-full lg:w-[360px] xl:w-[400px] shrink-0 mt-8 lg:mt-0")
 				div(class="rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 p-5 sm:p-6 text-center lg:text-left")
-					div(class="flex flex-col sm:flex-row lg:flex-col gap-2.5 mb-4")
-						a(href="#work-experience" class="w-full px-5 py-2.5 bg-white text-[var(--base-color)] rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors shadow-md inline-flex items-center justify-center gap-2")
+					div(class="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 mb-4")
+						a(href="#work-experience" class="text-sm text-white/75 hover:text-white inline-flex items-center gap-1 transition-colors")
 							span View Experience
-							svg(class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-								path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7")
-						a(href="#portfolio" class="w-full px-5 py-2.5 bg-white/10 hover:bg-white/15 text-white rounded-lg text-sm font-semibold transition-colors border border-white/25 inline-flex items-center justify-center gap-2")
+							span(aria-hidden="true") →
+						a(href="#portfolio" class="text-sm text-white/75 hover:text-white inline-flex items-center gap-1 transition-colors")
 							span View Projects
-							svg(class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-								path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14")
-					div(class="flex flex-col gap-2 text-sm")
-						a(href="./resume_2026_abril.pdf" download class="text-white/90 hover:text-white underline-offset-4 hover:underline inline-flex items-center justify-center lg:justify-start gap-1.5 transition-colors")
-							svg(class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-								path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z")
-							span Download Resume
-						a(href="./coverletter.pdf" download class="text-white/90 hover:text-white underline-offset-4 hover:underline inline-flex items-center justify-center lg:justify-start gap-1.5 transition-colors")
-							svg(class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-								path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z")
-							span Download Cover Letter
-						a(href="#contact" class="text-white/90 hover:text-white underline-offset-4 hover:underline inline-flex items-center justify-center lg:justify-start gap-1.5 transition-colors")
-							svg(class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-								path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z")
-							span Contact
+							span(aria-hidden="true") →
+					div(class="bg-white rounded-lg p-4 mb-4")
+						div(class="flex flex-col sm:flex-row lg:flex-col gap-3")
+							a(href="./resume_2026_abril.pdf" download class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors inline-flex items-center justify-center gap-2")
+								svg(class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+									path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z")
+								span Download Resume
+							a(href="#contact" class="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold px-6 py-3 rounded-lg transition-colors inline-flex items-center justify-center gap-2")
+								svg(class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+									path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z")
+								span Contact
+						p(class="text-sm text-center lg:text-left mt-2")
+							span(class="text-gray-500") Also available:
+							a(href="./coverletter.pdf" download class="text-gray-500 hover:text-gray-700 underline underline-offset-2 ml-1 inline-block transition-colors") Cover Letter ↓
 					div(class="mt-4 pt-4 border-t border-white/15 text-center lg:text-left")
 						p(class="text-[11px] lg:text-xs uppercase tracking-wider text-white/60 font-semibold mb-2.5") Multi-Industry
 						div(class="flex flex-wrap justify-center lg:justify-start gap-2")
@@ -48,5 +44,5 @@ div(class="main-container bg-[var(--base-color)]")
 					div(class="mt-4 pt-4 border-t border-white/15 text-center lg:text-left")
 						p(class="text-[11px] lg:text-xs uppercase tracking-wider text-white/60 font-semibold mb-2") Availability
 						p(class="text-xs sm:text-sm text-white/90 mb-2 font-medium") Open to remote opportunities
-						p(class="text-xs sm:text-sm text-white/80 mb-2") Actively seeking remote roles · Based in Costa Rica
+						p(class="text-xs sm:text-sm text-white/80 mb-2") Actively seeking remote roles · Based in Costa Rica · UTC-6 · Aligned with U.S. time zones
 						p(class="text-xs sm:text-sm text-white/70") International remote collaboration — not relocation: U.S. (tourist visa) · Canada (eTA)

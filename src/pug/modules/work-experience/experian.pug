@@ -1,5 +1,6 @@
 //- Experian Marketing Services
 include ../../mixins/employment-date
+include ../../mixins/stack-badges
 div
 	div(class="bg-gradient-to-br from-white to-gray-50/50 rounded-xl shadow-lg ring-1 ring-[var(--base-color)]/10 p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl transition-shadow duration-300 group backdrop-blur-sm")
 		div(class="flex flex-col m:flex-row m:items-start m:justify-between mb-4 gap-3")
@@ -10,11 +11,11 @@ div
 				+employmentDate('Aug 2012 - Oct 2015', '3 yrs 2 mos')
 		div(class="space-y-4")
 			div
-				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Role Overview
+				p(class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2") Role Overview
 				p(class="text-gray-700 leading-relaxed text-base")
 					| Front-end and email developer on a 10-person enterprise marketing team — contributed to reusable template architecture, onboarding, and QA practices for high-volume HTML campaigns, landing pages, and forms on Experian's proprietary platform.
 			div(class="space-y-3")
-				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Key Achievements
+				p(class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2") Key Achievements
 				ul(class="space-y-2.5 list-none text-gray-700 text-base")
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold") •
@@ -28,6 +29,4 @@ div
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold") •
 						span Supported high-volume email and web campaigns for beauty, retail, and enterprise clients (confidential)
-			p(class="text-sm text-gray-700 mt-5 pt-4 border-t border-gray-100")
-				span(class="font-semibold text-[var(--base-color)]") Stack:
-				|  HTML · CSS · JavaScript · Email development · A/B testing · Cross-client QA
+			+stackBadges(['HTML', 'CSS', 'JavaScript', 'Email Development', 'A/B Testing', 'Cross-client QA'])

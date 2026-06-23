@@ -1,5 +1,6 @@
 //- Gambling Industry
 include ../../mixins/employment-date
+include ../../mixins/stack-badges
 div
 	div(class="bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/20 rounded-xl shadow-lg ring-1 ring-[var(--base-color)]/10 p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl transition-shadow duration-300 group backdrop-blur-sm")
 		div(class="flex flex-col m:flex-row m:items-start m:justify-between mb-4 gap-3")
@@ -13,15 +14,15 @@ div
 				+employmentDate('Aug 2021 - Aug 2025', '4 yrs')
 		div(class="space-y-4")
 			div
-				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Role Overview
+				p(class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2") Role Overview
 				p(class="text-gray-700 leading-relaxed text-base")
 					| Owned frontend architecture and technical leadership across BetUs and BetAnything properties over four years — spanning WordPress platforms, sports media sites, affiliate properties, and BetAnything.eu on React, Remix, and Strapi. Led cross-functional delivery with architecture standards, mentoring, and engineering decision-making across a multi-brand sportsbook environment.
 			div
-				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Key Project — BetAnySports Platform Modernization
+				p(class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2") Key Project — BetAnySports Platform Modernization
 				p(class="text-gray-700 leading-relaxed text-base")
 					| A multi-brand sportsbook environment needed frontend modernization across WordPress properties and a high-traffic BetAnything.eu platform, including a planned 12-month rebrand and migration. I owned BetAnything.eu architecture on React, Remix, and Strapi, delivered custom WordPress work across affiliate and media properties, and established Jest, React Testing Library, and Cypress standards — completing the rebrand in 6 months (~50% faster) with improved Core Web Vitals and fewer production defects.
 			div(class="space-y-3")
-				p(class="text-sm font-semibold text-[var(--base-color)] uppercase tracking-wide mb-2") Key Achievements
+				p(class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2") Key Achievements
 				ul(class="space-y-2.5 list-none text-gray-700 text-base")
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold shrink-0") •
@@ -32,10 +33,4 @@ div
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold") •
 						span Improved team output and engineering consistency through architecture standards, hands-on training, and developer mentoring
-			p(class="text-sm text-gray-700 mt-5 pt-4 border-t border-gray-100")
-				span(class="font-semibold text-[var(--base-color)]") Stack:
-				|  React · Remix · TypeScript · WordPress · PHP · Laravel · Strapi · Jest · Cypress
-		div(class="mt-3 pt-3 border-t border-gray-200 flex flex-col gap-2")
-			span(class="text-sm font-semibold text-[var(--base-color)]") References: 
-			span(class="text-sm text-gray-600") Patricio Espinoza: CMO · References available upon request
-			span(class="text-sm text-gray-600") Patricio Garcia: Creative Director · References available upon request
+			+stackBadges(['React', 'Remix', 'TypeScript', 'WordPress', 'PHP', 'Laravel', 'Strapi', 'Jest', 'Cypress'])

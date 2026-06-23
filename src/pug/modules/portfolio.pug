@@ -6,6 +6,7 @@
 			image: 'images/pf/bet.png',
 			tech: 'React · Remix · Strapi',
 			summary: 'High-traffic sportsbook platform with headless CMS architecture.',
+			impact: 'Rebranded and migrated in 6 months (50% faster than planned). 1M+ monthly users.',
 			src: ''
 		},
 		{
@@ -14,6 +15,7 @@
 			image: 'images/pf/insiders.png',
 			tech: 'WordPress',
 			summary: 'SEO-driven sports media publishing at scale.',
+			impact: 'SEO-driven sports media site. High-volume content publishing at scale.',
 			src: ''
 		},
 		{
@@ -22,6 +24,7 @@
 			image: 'images/pf/crypto.png',
 			tech: 'React',
 			summary: 'Content marketing site with API-driven dynamic delivery.',
+			impact: 'Content marketing site with API-driven dynamic data delivery.',
 			src: ''
 		},
 		{
@@ -30,6 +33,7 @@
 			image: 'images/pf/mb.png',
 			tech: 'WordPress · PHP · JavaScript',
 			summary: 'Enterprise sportsbook frontend across multi-brand properties.',
+			impact: 'Enterprise sportsbook. 10+ custom WordPress themes delivered.',
 			src: ''
 		}
 	]
@@ -61,7 +65,9 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 						if item.tech
 							p(class="text-xs sm:text-sm text-[var(--base-color)]/90 font-medium mb-2")= item.tech
 						if item.summary
-							p(class="text-sm text-gray-600 leading-snug mb-4")= item.summary
+							p(class="text-sm text-gray-700 leading-snug mb-2")= item.summary
+						if item.impact
+							p(class="text-sm text-gray-800 font-medium leading-snug mb-4")= item.impact
 						div(class="flex flex-col gap-2 sm:gap-2.5")
 							if hasLive
 								a(href=item.live target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--base-color)]/5 to-blue-500/5 hover:from-[var(--base-color)]/10 hover:to-blue-500/10 text-xs sm:text-sm text-gray-700 hover:text-[var(--base-color)] rounded-lg transition-all duration-300 border border-[var(--base-color)]/10 hover:border-[var(--base-color)]/30 group/link")

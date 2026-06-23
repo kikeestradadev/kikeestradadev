@@ -48,8 +48,10 @@ div(class="main-container py-10 lg:py-12 bg-white" id="skills")
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Technical Skills
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
 		div(class="rounded-xl border border-gray-200/80 bg-slate-50/50 p-5 sm:p-6 lg:p-8")
-			div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5 lg:gap-y-6")
+			div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10")
 				each category in skillCategories
 					div
-						h3(class="text-sm font-bold text-[var(--base-color)] mb-1.5 leading-snug")= category.title
-						p(class="text-sm text-gray-700 leading-relaxed")= category.items.join(' · ')
+						h3(class="text-sm font-semibold uppercase tracking-wider text-blue-600 mb-3")= category.title
+						div(class="flex flex-wrap")
+							each skill in category.items
+								span(class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mr-2 mb-2")= skill
