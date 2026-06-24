@@ -3,6 +3,9 @@ block config
 	-let content 			= 'My Page'
 	-let siteName 			= 'GulpBoilerplate'
 	-let pageDescription 	= 'Here is the description Page.'
+	-let siteUrl 			= 'https://kikeestradadev.github.io/kikeestradadev'
+	-let ogImage 			= siteUrl + '/images/icon_1024.png'
+	-let ogTitle 			= siteName + ' - ' + content
 doctype html
 html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 	head
@@ -10,9 +13,22 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		meta(name="description", content=pageDescription)
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(name="keywords", content="Frontend Architect, Technical Leader, Engineering Leadership, Frontend Architecture, Scalable Systems, React, TypeScript, Next.js, Remix, Design Systems, Accessibility, WCAG, Core Web Vitals, Performance Optimization, Headless CMS, Strapi, WordPress, Team Mentoring, Cross-functional Collaboration, Agile, Scrum")
-		meta(property="og:title", content=siteName + " - " + content)
+		meta(property="og:title", content=ogTitle)
 		meta(property="og:description", content=pageDescription)
 		meta(property="og:type", content="website")
+		meta(property="og:url", content=siteUrl + '/')
+		meta(property="og:site_name", content=siteName)
+		meta(property="og:locale", content="en_US")
+		meta(property="og:image", content=ogImage)
+		meta(property="og:image:width", content="1024")
+		meta(property="og:image:height", content="1024")
+		meta(property="og:image:alt", content=ogTitle)
+		meta(name="twitter:card", content="summary_large_image")
+		meta(name="twitter:title", content=ogTitle)
+		meta(name="twitter:description", content=pageDescription)
+		meta(name="twitter:image", content=ogImage)
+		meta(name="twitter:image:alt", content=ogTitle)
+		link(rel="canonical", href=siteUrl + '/')
 		meta(name="apple-mobile-web-app-status-bar-style", content="default")
 		meta(name="format-detection", content="telephone=no")
 		link(rel="shortcut icon", type="image/png", href="images/icon_192.png")
