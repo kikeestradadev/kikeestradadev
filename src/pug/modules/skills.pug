@@ -58,4 +58,5 @@ div(class="main-container py-10 lg:py-12 bg-white" id="skills")
 						h3(class="text-sm font-semibold uppercase tracking-wider text-blue-600 mb-3")= category.title
 						div(class="flex flex-wrap")
 							each skill in category.items
-								span(class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mr-2 mb-2")= skill
+								- var isPrimarySkill = category.title === 'Frontend Development' && ['React', 'TypeScript', 'Next.js'].includes(skill)
+								span(class=isPrimarySkill ? 'inline-block bg-blue-100 text-blue-900 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2 border border-blue-500' : 'inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mr-2 mb-2')= skill

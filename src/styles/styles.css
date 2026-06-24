@@ -62,4 +62,95 @@ body {
     --footer-height: 64px;
   }
 }
+
+.metrics-block {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.metrics-section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1rem;
+}
+
+.metrics-top-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 12px 1fr 12px 1fr 12px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.metric-number {
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin: 0;
+}
+
+.metrics-divider {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.metrics-bottom-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 12px 1fr 12px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.metric-number-sm {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 2px;
+}
+
+.metric-sublabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 4px;
+}
+
+.metric-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .metrics-top-grid {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metrics-bottom-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
