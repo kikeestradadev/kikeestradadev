@@ -4,36 +4,44 @@
 			title: 'BetAnySports',
 			live: 'https://www.betanything.eu/',
 			image: 'images/pf/bet.png',
+			problem: 'A multi-brand sportsbook needed platform modernization and a 12-month rebrand without disrupting high-traffic operations.',
+			solution: 'Owned product architecture and delivery for the rebrand and migration, with testing standards that reduced release risk.',
+			impact: 'Rebranded and migrated a 1M+ MAU platform in 6 months — 50% faster than planned.',
+			contribution: 'Technical lead for architecture, delivery, and engineering standards across the modernization.',
 			tech: 'React · Remix · Strapi',
-			summary: 'High-traffic sportsbook platform with headless CMS architecture.',
-			impact: 'Rebranded and migrated in 6 months (50% faster than planned). 1M+ monthly users.',
 			src: ''
 		},
 		{
 			title: 'Insiders',
 			live: 'https://insidersbettingdigest.com/',
 			image: 'images/pf/insiders.png',
+			problem: 'Sports media needed reliable publishing at high content volume to support SEO-driven growth.',
+			solution: 'Built and maintained a publishing platform optimized for high-volume editorial workflows.',
+			impact: 'Enabled consistent SEO-driven publishing operations at scale.',
+			contribution: 'Owned delivery of the publishing system and operational improvements for content velocity.',
 			tech: 'WordPress',
-			summary: 'SEO-driven sports media publishing at scale.',
-			impact: 'SEO-driven sports media site. High-volume content publishing at scale.',
 			src: ''
 		},
 		{
 			title: 'Crypto Tutorials',
 			live: 'https://crypto-tutorials.com/',
 			image: 'images/pf/crypto.png',
+			problem: 'A content marketing product needed dynamic data delivery without manual page rebuilds for every update.',
+			solution: 'Shipped an API-driven content product that updates dynamically as data changes.',
+			impact: 'Reduced manual publishing overhead and kept educational content current.',
+			contribution: 'Designed and delivered the product architecture and dynamic content delivery flow.',
 			tech: 'React',
-			summary: 'Content marketing site with API-driven dynamic delivery.',
-			impact: 'Content marketing site with API-driven dynamic data delivery.',
 			src: ''
 		},
 		{
 			title: 'My Bookie',
 			live: 'https://www.mybookie.ag/',
 			image: 'images/pf/mb.png',
+			problem: 'Multi-brand sportsbook and casino properties needed consistent delivery across commercial and product surfaces.',
+			solution: 'Established reusable theme and delivery systems for multi-brand property work.',
+			impact: 'Delivered 10+ custom property themes across enterprise sportsbook brands.',
+			contribution: 'Led delivery and mentoring that improved team output across concurrent brand initiatives.',
 			tech: 'WordPress · PHP · JavaScript',
-			summary: 'Enterprise sportsbook frontend across multi-brand properties.',
-			impact: 'Enterprise sportsbook. 10+ custom WordPress themes delivered.',
 			src: ''
 		}
 	]
@@ -41,7 +49,7 @@
 div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-rose-50/20" id="portfolio")
 	div(class="container py-12 lg:py-16")
 		div(class="mb-12 text-center")
-			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Portfolio
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Selected Work
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
 			p(class="text-sm italic text-gray-400 text-center mb-6 max-w-2xl mx-auto") Additional work available on request — including SaaS, healthcare, and education projects (current client work under NDA).
 		div(class="grid grid-cols-1 m:grid-cols-2 l:grid-cols-3 lg:grid-cols-4 gap-6")
@@ -62,13 +70,22 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 								div(class="absolute inset-0 flex items-center justify-center bg-[var(--base-color)]/70 px-4")
 									span(class="text-white text-sm font-semibold text-center") Confidential client work
 					div(class="p-4 sm:p-5 bg-gradient-to-b from-transparent to-white/50")
-						h3(class="text-base sm:text-lg font-bold mb-1.5 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
-						if item.tech
-							p(class="text-xs sm:text-sm text-[var(--base-color)]/90 font-medium mb-2")= item.tech
-						if item.summary
-							p(class="text-sm text-gray-700 leading-snug mb-2")= item.summary
+						h3(class="text-base sm:text-lg font-bold mb-3 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
+						if item.problem
+							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Problem
+							p(class="text-sm text-gray-700 leading-snug mb-2.5")= item.problem
+						if item.solution
+							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Solution
+							p(class="text-sm text-gray-700 leading-snug mb-2.5")= item.solution
 						if item.impact
-							p(class="text-sm text-gray-800 font-medium leading-snug mb-4")= item.impact
+							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Business Impact
+							p(class="text-sm text-gray-800 font-medium leading-snug mb-2.5")= item.impact
+						if item.contribution
+							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") My Contribution
+							p(class="text-sm text-gray-700 leading-snug mb-2.5")= item.contribution
+						if item.tech
+							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Technologies
+							p(class="text-xs sm:text-sm text-[var(--base-color)]/90 font-medium mb-4")= item.tech
 						div(class="flex flex-col gap-2 sm:gap-2.5")
 							if hasLive
 								a(href=item.live target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--base-color)]/5 to-blue-500/5 hover:from-[var(--base-color)]/10 hover:to-blue-500/10 text-xs sm:text-sm text-gray-700 hover:text-[var(--base-color)] rounded-lg transition-all duration-300 border border-[var(--base-color)]/10 hover:border-[var(--base-color)]/30 group/link")

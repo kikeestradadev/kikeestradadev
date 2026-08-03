@@ -12,7 +12,7 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		meta(charset="utf-8")
 		meta(name="description", content=pageDescription)
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(name="keywords", content="Frontend Architect, Technical Leader, Engineering Leadership, Frontend Architecture, Scalable Systems, React, TypeScript, Next.js, Remix, Design Systems, Accessibility, WCAG, Core Web Vitals, Performance Optimization, Headless CMS, Strapi, WordPress, Team Mentoring, Cross-functional Collaboration, Agile, Scrum")
+		meta(name="keywords", content="Senior Software Engineer, Product Engineer, Technical Lead, Software Architecture, Enterprise Software, AI-Assisted Development, Product Engineering, Technical Leadership, TypeScript, React, Design Systems, Web Platforms, Cross-functional Collaboration")
 		meta(property="og:title", content=ogTitle)
 		meta(property="og:description", content=pageDescription)
 		meta(property="og:type", content="website")
@@ -39,8 +39,30 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="./tailwind-dist.css")
-		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
-	body(class=`${currentPage} bg-gradient-to-br from-blue-50 via-indigo-50/30 to-purple-50/20 flex flex-col min-h-screen`, itemscope itemtype="http://schema.org/WebPage")
+		title= siteName + " | " + content
+		script(type="application/ld+json").
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Enrique Estrada Nunez",
+				"url": "https://kikeestradadev.github.io/kikeestradadev/",
+				"jobTitle": "Senior Software Engineer",
+				"description": "Senior Software Engineer with 18+ years delivering enterprise software products at scale. Product engineering, technical leadership, and AI-assisted delivery.",
+				"sameAs": [
+					"https://www.linkedin.com/in/kikeestrada/",
+					"https://github.com/kikeestradadev"
+				],
+				"knowsAbout": [
+					"Software Engineering",
+					"Product Engineering",
+					"Software Architecture",
+					"Technical Leadership",
+					"AI-Assisted Development",
+					"TypeScript",
+					"React",
+					"Enterprise Software"
+				]
+			}	body(class=`${currentPage} bg-gradient-to-br from-blue-50 via-indigo-50/30 to-purple-50/20 flex flex-col min-h-screen`, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
 		header(class='w-full flex flex-col bg-[var(--base-color)] border-b border-white/10 shadow-sm')
 			block main-header
