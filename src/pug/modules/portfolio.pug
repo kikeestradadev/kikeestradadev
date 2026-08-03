@@ -4,10 +4,8 @@
 			title: 'BetAnySports',
 			live: 'https://www.betanything.eu/',
 			image: 'images/pf/bet.png',
-			problem: 'A multi-brand sportsbook needed platform modernization and a 12-month rebrand without disrupting high-traffic operations.',
-			solution: 'Owned product architecture and delivery for the rebrand and migration, with testing standards that reduced release risk.',
-			impact: 'Rebranded and migrated a 1M+ MAU platform in 6 months — 50% faster than planned.',
-			contribution: 'Technical lead for architecture, delivery, and engineering standards across the modernization.',
+			summary: 'High-traffic sportsbook platform modernization and rebrand.',
+			impact: '1M+ MAU · shipped in 6 months (50% faster than planned).',
 			tech: 'React · Remix · Strapi',
 			src: ''
 		},
@@ -15,10 +13,8 @@
 			title: 'Insiders',
 			live: 'https://insidersbettingdigest.com/',
 			image: 'images/pf/insiders.png',
-			problem: 'Sports media needed reliable publishing at high content volume to support SEO-driven growth.',
-			solution: 'Built and maintained a publishing platform optimized for high-volume editorial workflows.',
-			impact: 'Enabled consistent SEO-driven publishing operations at scale.',
-			contribution: 'Owned delivery of the publishing system and operational improvements for content velocity.',
+			summary: 'Sports media publishing platform for high-volume content.',
+			impact: 'SEO-driven publishing at scale.',
 			tech: 'WordPress',
 			src: ''
 		},
@@ -26,22 +22,63 @@
 			title: 'Crypto Tutorials',
 			live: 'https://crypto-tutorials.com/',
 			image: 'images/pf/crypto.png',
-			problem: 'A content marketing product needed dynamic data delivery without manual page rebuilds for every update.',
-			solution: 'Shipped an API-driven content product that updates dynamically as data changes.',
-			impact: 'Reduced manual publishing overhead and kept educational content current.',
-			contribution: 'Designed and delivered the product architecture and dynamic content delivery flow.',
+			summary: 'Content marketing product with API-driven updates.',
+			impact: 'Less manual publishing · content stays current.',
 			tech: 'React',
+			src: ''
+		},
+		{
+			title: 'Cryptovig',
+			live: 'https://cryptovig.com/',
+			image: 'images/pf/cryptovig.png',
+			summary: 'WordPress site for a sports betting brand.',
+			impact: 'Production property for content and marketing.',
+			tech: 'WordPress',
+			src: ''
+		},
+		{
+			title: 'Sport Betting AI',
+			live: 'https://sportbettingai.com/',
+			image: 'images/pf/sbai.png',
+			summary: 'WordPress sportsbook magazine focused on content and SEO.',
+			impact: 'Scalable editorial and organic search operations.',
+			tech: 'WordPress · SEO',
 			src: ''
 		},
 		{
 			title: 'My Bookie',
 			live: 'https://www.mybookie.ag/',
 			image: 'images/pf/mb.png',
-			problem: 'Multi-brand sportsbook and casino properties needed consistent delivery across commercial and product surfaces.',
-			solution: 'Established reusable theme and delivery systems for multi-brand property work.',
-			impact: 'Delivered 10+ custom property themes across enterprise sportsbook brands.',
-			contribution: 'Led delivery and mentoring that improved team output across concurrent brand initiatives.',
+			summary: 'Multi-brand sportsbook and casino delivery systems.',
+			impact: '10+ custom property themes shipped.',
 			tech: 'WordPress · PHP · JavaScript',
+			src: ''
+		},
+		{
+			title: 'Ahorrando para tu Futuro',
+			live: 'https://kikeestrada.github.io/portfolio-ahorrando/',
+			image: 'images/pf/pf_ahorrando.png',
+			summary: 'Laravel education platform for BAC San José.',
+			impact: 'Regional access to free educational materials.',
+			tech: 'Laravel · PHP',
+			src: ''
+		},
+		{
+			title: 'Maratones',
+			live: 'https://kikeestrada.github.io/portfolio-maratones/',
+			image: 'images/pf/pf_maratones.png',
+			summary: 'Special-event website for a marathon race.',
+			impact: 'Dedicated digital presence for the event.',
+			tech: 'HTML · CSS · JavaScript',
+			src: ''
+		},
+		{
+			title: 'Villa Lapas',
+			live: 'https://kikeestrada.github.io/portfolioVillaLapasWebSite/',
+			image: 'images/pf/pf_villalapas.png',
+			summary: 'WordPress tourism site for Hotel Villa Lapas.',
+			impact: 'Rooms, tours, events, and booking CTAs in one place.',
+			tech: 'WordPress',
 			src: ''
 		}
 	]
@@ -70,22 +107,13 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 								div(class="absolute inset-0 flex items-center justify-center bg-[var(--base-color)]/70 px-4")
 									span(class="text-white text-sm font-semibold text-center") Confidential client work
 					div(class="p-4 sm:p-5 bg-gradient-to-b from-transparent to-white/50")
-						h3(class="text-base sm:text-lg font-bold mb-3 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
-						if item.problem
-							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Problem
-							p(class="text-sm text-gray-700 leading-snug mb-2.5")= item.problem
-						if item.solution
-							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Solution
-							p(class="text-sm text-gray-700 leading-snug mb-2.5")= item.solution
-						if item.impact
-							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Business Impact
-							p(class="text-sm text-gray-800 font-medium leading-snug mb-2.5")= item.impact
-						if item.contribution
-							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") My Contribution
-							p(class="text-sm text-gray-700 leading-snug mb-2.5")= item.contribution
+						h3(class="text-base sm:text-lg font-bold mb-1.5 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
 						if item.tech
-							p(class="text-[11px] font-semibold uppercase tracking-wide text-gray-500 mb-1") Technologies
-							p(class="text-xs sm:text-sm text-[var(--base-color)]/90 font-medium mb-4")= item.tech
+							p(class="text-xs sm:text-sm text-[var(--base-color)]/90 font-medium mb-2")= item.tech
+						if item.summary
+							p(class="text-sm text-gray-700 leading-snug mb-2")= item.summary
+						if item.impact
+							p(class="text-sm text-gray-800 font-medium leading-snug mb-4")= item.impact
 						div(class="flex flex-col gap-2 sm:gap-2.5")
 							if hasLive
 								a(href=item.live target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--base-color)]/5 to-blue-500/5 hover:from-[var(--base-color)]/10 hover:to-blue-500/10 text-xs sm:text-sm text-gray-700 hover:text-[var(--base-color)] rounded-lg transition-all duration-300 border border-[var(--base-color)]/10 hover:border-[var(--base-color)]/30 group/link")
