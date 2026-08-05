@@ -2,11 +2,11 @@
 	const buildPrinciples = [
 		{
 			title: 'Architecture first',
-			text: 'Define ownership, boundaries, and reusable patterns before scaling features.'
+			text: 'Define ownership, boundaries, and reusable patterns across the entire stack (frontend, backend, and database) before scaling features.'
 		},
 		{
 			title: 'AI-assisted coding',
-			text: 'Use AI tools to speed debugging, prototyping, and documentation — never to skip judgment.'
+			text: 'Leverage AI through prompt engineering, custom rules, and reusable skills to accelerate debugging, prototyping, and documentation — augmenting productivity without compromising engineering judgment.'
 		},
 		{
 			title: 'Human-reviewed decisions',
@@ -31,14 +31,19 @@
 		{
 			title: 'Developer productivity',
 			text: 'Improve standards, reviews, and workflows so teams deliver more with less friction.'
+		},
+		{
+			title: 'End-to-End Delivery',
+			text: 'Oversee the full delivery lifecycle: from writing clean, testable code to managing CI/CD pipelines and ensuring smooth, reliable deployments.'
 		}
 	]
 
 div(class="main-container bg-white border-y border-gray-100" id="how-i-build")
 	div(class="container py-10 lg:py-14")
 		div(class="mb-8 text-center")
-			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") How I Build Software Today
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") My Engineering Philosophy: Building for Impact
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
+			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") My approach combines a strong architectural foundation with the pragmatism of modern AI tools. The goal is always the same: ship high-quality software that delivers measurable business value, faster.
 			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") AI is a multiplier. Architecture, engineering decisions, and product thinking remain human-driven.
 		div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5")
 			each item in buildPrinciples
