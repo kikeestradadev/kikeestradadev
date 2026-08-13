@@ -2,7 +2,7 @@ extends ../config/template
 append config
 	-currentPage		= "Home"
 	-siteName			= 'Enrique Estrada Nunez'
-	-content			= 'Senior Full Stack Engineer'
+	-content			= 'Senior Software Engineer — Frontend Architect'
 	-pageDescription	= 'Senior Full Stack Engineer with 18+ years delivering enterprise software products at scale. Full stack development, software architecture, and AI-assisted delivery for SaaS, fintech, and high-traffic platforms.'
 	-siteUrl			= 'https://kikeestradadev.github.io/kikeestradadev'
 	-ogImage			= siteUrl + '/images/icon_1024.png'
@@ -11,6 +11,7 @@ block main-header
 	include ../modules/top-nav-title
 block main-container 
 	include ../modules/profile
+	include ../modules/what-im-looking-for
 	include ../modules/how-i-build-software
 	//- Professional Impact hidden — redundant with header summary and Career Highlights. Re-enable: include ../modules/professional-impact
 	include ../modules/career-highlights
@@ -21,7 +22,6 @@ block main-container
 	include ../modules/portfolio
 	//- TODO: Re-enable Professional References when verified LinkedIn recommendations or client quotes are available.
 	//- include ../modules/professional-references
-	include ../modules/what-im-looking-for
 block main-footer
 	include ../modules/footer
 block scripts
