@@ -1,53 +1,33 @@
 -
 	const skillCategories = [
 		{
-			title: 'Software Engineering',
-			items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Remix', 'Astro', 'Node.js', 'REST APIs', 'GraphQL']
+			title: 'Frontend',
+			items: ['React', 'Next.js', 'Remix', 'Astro', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'WordPress']
 		},
 		{
-			title: 'Backend & Database Engineering',
-			items: ['Node.js', 'Express.js', 'RESTful API Design', 'PostgreSQL', 'MySQL', 'Supabase', 'JWT Authentication & Authorization', 'API Testing with Postman']
+			title: 'Backend / Application',
+			items: ['Node.js', 'Express', 'REST APIs', 'GraphQL', 'PHP', 'Laravel', 'Strapi']
 		},
 		{
-			title: 'CI/CD & Data',
-			items: ['Git-based workflows (Git Flow, GitHub Flow)', 'CI/CD Pipelines (GitHub Actions, GitLab CI)', 'Deployment & Release Management', 'Data Visualization & Dashboards']
+			title: 'Data',
+			items: ['PostgreSQL', 'MySQL', 'Supabase']
 		},
 		{
-			title: 'Product Engineering',
-			items: ['Product delivery', 'MVP development', 'Cross-functional collaboration', 'Requirements to architecture', 'Reusable platforms']
+			title: 'Infrastructure / Deployment',
+			items: ['Git-based workflows', 'GitHub Actions', 'GitLab CI', 'Deployment & release management']
 		},
 		{
-			title: 'AI-Assisted Development',
-			items: ['Cursor', 'Claude', 'ChatGPT', 'Prompt Engineering', 'Custom Rules & Skills', 'AI-assisted debugging', 'Prototyping', 'Documentation workflows', 'AI API integrations', 'RAG product integrations']
-		},
-		{
-			title: 'Architecture',
-			items: ['SSR · SSG · ISR', 'Component libraries', 'Design systems', 'Micro frontends', 'Headless CMS', 'WordPress · Gutenberg', 'Strapi', 'Enterprise web platforms']
-		},
-		{
-			title: 'Frontend Engineering',
-			items: ['Tailwind CSS', 'Design systems', 'Accessibility · WCAG', 'Core Web Vitals', 'Code splitting', 'Bundle optimization']
-		},
-		{
-			title: 'Developer Workflow',
-			items: ['Git-based workflows', 'Agile · Scrum', 'Code review & standards', 'Technical planning', 'Developer productivity']
-		},
-		{
-			title: 'Testing & Quality',
-			items: ['Jest', 'React Testing Library', 'Cypress', 'Unit & integration testing', 'QA workflows']
-		},
-		{
-			title: 'Leadership',
-			items: ['Mentoring', 'Code Review', 'Architecture Governance', 'Engineering Standards', 'Team Collaboration']
+			title: 'Testing',
+			items: ['Jest', 'React Testing Library', 'Cypress']
 		}
 	]
 
 div(class="main-container py-10 lg:py-12 bg-white" id="skills")
 	div(class="container")
 		div(class="mb-6 lg:mb-8 text-center")
-			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Technical Skills
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Technical Stack
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-			p(class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm") Capabilities organized by how I deliver software — not by a single layer of the stack.
+			p(class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm") Tools I actually ship with. The work above is the evidence.
 		div(class="rounded-xl border border-gray-200/80 bg-slate-50/50 p-5 sm:p-6 lg:p-8")
 			div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10")
 				each category in skillCategories

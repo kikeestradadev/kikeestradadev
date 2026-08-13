@@ -2,25 +2,20 @@ extends ../config/template
 append config
 	-currentPage		= "Home"
 	-siteName			= 'Enrique Estrada Nunez'
-	-content			= 'Senior Full Stack Engineer'
-	-pageDescription	= 'Senior Full Stack Engineer with 18+ years delivering enterprise software products at scale. Full stack development, software architecture, and AI-assisted delivery for SaaS, fintech, and high-traffic platforms.'
+	-content			= 'Senior Full Stack Engineer · Frontend Architecture'
+	-pageDescription	= 'Senior Full Stack Engineer specializing in Frontend Architecture. I build modern web applications, scalable interfaces, and digital products — with 18+ years of frontend and UI engineering across the full stack.'
 	-siteUrl			= 'https://kikeestradadev.github.io/kikeestradadev'
 	-ogImage			= siteUrl + '/images/icon_1024.png'
 	-ogTitle			= siteName + ' | ' + content
 block main-header
 	include ../modules/top-nav-title
 block main-container 
-	include ../modules/profile
-	include ../modules/how-i-build-software
-	//- Professional Impact hidden — redundant with header summary and Career Highlights. Re-enable: include ../modules/professional-impact
-	include ../modules/career-highlights
-	include ../modules/work-experience
-	//- Featured Technical Projects hidden — content merged into Work Experience (Trigal Media, BetUS). Re-enable: include ../modules/featured-case-studies
-	//- Core Specializations hidden — redundant with hero, Career Highlights, and Technical Skills. Re-enable: include ../modules/core-specializations
-	include ../modules/skills
+	include ../modules/featured-case-studies
 	include ../modules/portfolio
-	//- TODO: Re-enable Professional References when verified LinkedIn recommendations or client quotes are available.
-	//- include ../modules/professional-references
+	include ../modules/how-i-build-software
+	include ../modules/skills
+	include ../modules/work-experience
+	include ../modules/profile
 	include ../modules/what-im-looking-for
 block main-footer
 	include ../modules/footer

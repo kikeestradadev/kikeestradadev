@@ -1,50 +1,53 @@
 -
 	const buildPrinciples = [
 		{
-			title: 'Architecture first',
-			text: 'Define ownership, boundaries, and reusable patterns across the entire stack (frontend, backend, and database) before scaling features.'
+			title: 'Frontend Architecture',
+			text: 'Ownership, boundaries, and reusable patterns for multi-brand and high-traffic interfaces — component platforms, headless CMS, and SSR/SSG where the product needs them.'
 		},
 		{
-			title: 'AI-assisted coding',
-			text: 'Leverage AI through prompt engineering, custom rules, and reusable skills to accelerate debugging, prototyping, and documentation — augmenting productivity without compromising engineering judgment.'
+			title: 'Full Stack Web Applications',
+			text: 'Modern web products across the stack: React, Next.js, and Remix on the client; Node, Laravel, Strapi, and WordPress where the application lives.'
 		},
 		{
-			title: 'Human-reviewed decisions',
-			text: 'Architecture, product trade-offs, and production changes stay under engineering ownership.'
+			title: 'UI Engineering',
+			text: 'Production interfaces at enterprise scale: design-to-code, campaign and product surfaces, and UI that has to hold up under real traffic and real brand constraints.'
 		},
 		{
-			title: 'Rapid prototyping',
-			text: 'Validate product direction quickly, then harden what proves valuable.'
+			title: 'Design Systems',
+			text: 'Component libraries and shared UI standards that made team delivery faster and more consistent — used across properties, not as a side documentation project.'
 		},
 		{
-			title: 'Testing & quality',
-			text: 'Protect delivery with practical unit, integration, and end-to-end coverage where risk is highest.'
+			title: 'APIs & Data',
+			text: 'REST and GraphQL integrations, headless CMS (Strapi), and data stores used in real products — PostgreSQL, MySQL, and Supabase.'
 		},
 		{
-			title: 'Performance & maintainability',
-			text: 'Ship software that stays fast, accessible, and workable for the next team.'
+			title: 'Performance',
+			text: 'Core Web Vitals, code splitting, and bundle discipline on platforms that already have users. Speed is a delivery constraint, not a polish pass.'
 		},
 		{
-			title: 'Product mindset',
-			text: 'Measure success by business outcomes — speed, reliability, and user impact — not framework choice.'
+			title: 'Accessibility',
+			text: 'WCAG-oriented interface work as part of UI engineering — semantic structure, usable components, and quality checks before handoff.'
 		},
 		{
-			title: 'Developer productivity',
-			text: 'Improve standards, reviews, and workflows so teams deliver more with less friction.'
+			title: 'Application Architecture',
+			text: 'Turn product goals into architecture that a team can actually ship — clearer ownership, reusable platforms, and standards that survive the next feature.'
 		},
 		{
-			title: 'End-to-End Delivery',
-			text: 'Oversee the full delivery lifecycle: from writing clean, testable code to managing CI/CD pipelines and ensuring smooth, reliable deployments.'
+			title: 'AI-assisted development',
+			text: 'Cursor, Claude, and ChatGPT in the daily workflow — plus AI API and RAG integrations in shipped MVPs. Architecture and review stay human-owned.'
+		},
+		{
+			title: 'Developer Experience',
+			text: 'Code review, engineering standards, mentoring, and workflow design so teams deliver with less friction — from junior-heavy startups to 25-person delivery orgs.'
 		}
 	]
 
-div(class="main-container bg-white border-y border-gray-100" id="how-i-build")
+div(class="main-container bg-white border-y border-gray-100" id="engineering")
 	div(class="container py-10 lg:py-14")
 		div(class="mb-8 text-center")
-			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") My Engineering Philosophy: Building for Impact
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Engineering
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") My approach combines a strong architectural foundation with the pragmatism of modern AI tools. The goal is always the same: ship high-quality software that delivers measurable business value, faster.
-			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") AI is a multiplier. Architecture, engineering decisions, and product thinking remain human-driven.
+			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") Frontend depth first. Broader application ownership as the work required it.
 		div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5")
 			each item in buildPrinciples
 				div(class="bg-slate-50/80 rounded-xl border border-gray-200/80 p-5 hover:shadow-md transition-shadow duration-300")
