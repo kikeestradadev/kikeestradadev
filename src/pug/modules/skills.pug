@@ -1,40 +1,36 @@
 -
 	const skillCategories = [
 		{
-			title: 'Software Engineering',
-			items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Remix', 'Astro', 'Node.js', 'REST APIs', 'GraphQL']
+			title: 'Frontend Architecture',
+			items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Remix', 'Astro', 'Design systems', 'Component libraries', 'SSR · SSG · ISR', 'Accessibility · WCAG', 'Core Web Vitals', 'Micro frontends']
 		},
 		{
-			title: 'Backend & Database Engineering',
-			items: ['Node.js', 'Express.js', 'RESTful API Design', 'PostgreSQL', 'MySQL', 'Supabase', 'JWT Authentication & Authorization', 'API Testing with Postman']
+			title: 'Full-Stack Product Delivery',
+			items: ['Node.js', 'PHP', 'Laravel', 'REST APIs', 'GraphQL', 'Headless CMS', 'Strapi', 'WordPress · Gutenberg', 'Supabase', 'Express.js']
 		},
 		{
-			title: 'CI/CD & Data',
-			items: ['Git-based workflows (Git Flow, GitHub Flow)', 'CI/CD Pipelines (GitHub Actions, GitLab CI)', 'Deployment & Release Management', 'Data Visualization & Dashboards']
+			title: 'Backend & Data',
+			items: ['PostgreSQL', 'MySQL', 'RESTful API Design', 'JWT Authentication & Authorization', 'API Testing with Postman']
 		},
 		{
-			title: 'Product Engineering',
-			items: ['Product delivery', 'MVP development', 'Cross-functional collaboration', 'Requirements to architecture', 'Reusable platforms']
+			title: 'Testing & Quality',
+			items: ['Jest', 'React Testing Library', 'Cypress', 'Unit & integration testing', 'QA workflows']
+		},
+		{
+			title: 'CI/CD & Delivery',
+			items: ['Git-based workflows (Git Flow, GitHub Flow)', 'CI/CD Pipelines (GitHub Actions, GitLab CI)', 'Deployment & Release Management', 'Agile · Scrum']
 		},
 		{
 			title: 'AI-Assisted Development',
 			items: ['Cursor', 'Claude', 'ChatGPT', 'Prompt Engineering', 'Custom Rules & Skills', 'AI-assisted debugging', 'Prototyping', 'Documentation workflows', 'AI API integrations', 'RAG product integrations']
 		},
 		{
-			title: 'Architecture',
-			items: ['SSR · SSG · ISR', 'Component libraries', 'Design systems', 'Micro frontends', 'Headless CMS', 'WordPress · Gutenberg', 'Strapi', 'Enterprise web platforms']
-		},
-		{
-			title: 'Frontend Engineering',
-			items: ['Tailwind CSS', 'Design systems', 'Accessibility · WCAG', 'Core Web Vitals', 'Code splitting', 'Bundle optimization']
+			title: 'UI & Performance',
+			items: ['Tailwind CSS', 'Code splitting', 'Bundle optimization', 'Data Visualization & Dashboards']
 		},
 		{
 			title: 'Developer Workflow',
-			items: ['Git-based workflows', 'Agile · Scrum', 'Code review & standards', 'Technical planning', 'Developer productivity']
-		},
-		{
-			title: 'Testing & Quality',
-			items: ['Jest', 'React Testing Library', 'Cypress', 'Unit & integration testing', 'QA workflows']
+			items: ['Code review & standards', 'Technical planning', 'Developer productivity', 'Cross-functional collaboration']
 		},
 		{
 			title: 'Leadership',
@@ -47,7 +43,7 @@ div(class="main-container py-10 lg:py-12 bg-white" id="skills")
 		div(class="mb-6 lg:mb-8 text-center")
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Technical Skills
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-			p(class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm") Capabilities organized by how I deliver software — not by a single layer of the stack.
+			p(class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm") Frontend architecture as the core depth, with full-stack product delivery across APIs, CMS, backend integrations, testing, and release workflows.
 		div(class="rounded-xl border border-gray-200/80 bg-slate-50/50 p-5 sm:p-6 lg:p-8")
 			div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10")
 				each category in skillCategories
