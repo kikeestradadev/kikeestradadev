@@ -3,7 +3,7 @@ append config
 	-currentPage		= "Home"
 	-siteName			= 'Enrique Estrada Nunez'
 	-content			= 'Senior Software Engineer'
-	-pageDescription	= 'Senior Software Engineer with 18+ years building high-traffic web platforms across gaming, fintech, banking, SaaS, and enterprise — combining frontend architecture, API/CMS integrations, backend collaboration, and AI-assisted workflows.'
+	-pageDescription	= 'Senior Software Engineer with deep frontend architecture expertise and full-stack product delivery ownership. Cut a 12-month BetUS rebrand to 6 months. Supported 1M+ monthly users across React, Remix, and Strapi.'
 	-siteUrl			= 'https://kikeestradadev.github.io/kikeestradadev'
 	-ogImage			= siteUrl + '/images/icon_1024.png'
 	-ogTitle			= siteName + ' | ' + content
@@ -25,3 +25,61 @@ block main-container
 block main-footer
 	include ../modules/footer
 block scripts
+	script.
+		(function () {
+			var desktopQuery = window.matchMedia('(min-width: 1280px)');
+			var portfolioSwiper = null;
+
+			function destroyPortfolioSwiper() {
+				if (!portfolioSwiper) return;
+				portfolioSwiper.destroy(true, true);
+				portfolioSwiper = null;
+			}
+
+			function initPortfolioSwiper() {
+				var el = document.querySelector('.portfolio-swiper');
+				if (!el || typeof Swiper === 'undefined') return;
+				if (desktopQuery.matches) {
+					destroyPortfolioSwiper();
+					return;
+				}
+				if (portfolioSwiper) return;
+				portfolioSwiper = new Swiper(el, {
+					slidesPerView: 1.12,
+					spaceBetween: 16,
+					grabCursor: true,
+					watchOverflow: true,
+					observer: true,
+					observeParents: true,
+					pagination: {
+						el: '.portfolio-swiper-pagination',
+						clickable: true
+					},
+					navigation: {
+						nextEl: '.portfolio-swiper-next',
+						prevEl: '.portfolio-swiper-prev'
+					},
+					breakpoints: {
+						480: {
+							slidesPerView: 1.2,
+							spaceBetween: 16
+						},
+						640: {
+							slidesPerView: 2,
+							spaceBetween: 20
+						},
+						960: {
+							slidesPerView: 2.25,
+							spaceBetween: 24
+						}
+					}
+				});
+			}
+
+			if (desktopQuery.addEventListener) {
+				desktopQuery.addEventListener('change', initPortfolioSwiper);
+			} else if (desktopQuery.addListener) {
+				desktopQuery.addListener(initPortfolioSwiper);
+			}
+			initPortfolioSwiper();
+		})();

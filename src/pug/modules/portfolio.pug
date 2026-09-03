@@ -1,3 +1,4 @@
+include ../mixins/portfolio-card
 -
 	const portfolioItems = [
 		{
@@ -5,7 +6,7 @@
 			live: 'https://www.betanything.eu/',
 			image: 'images/pf/bet.png',
 			summary: 'High-traffic sportsbook platform modernization and rebrand.',
-			impact: '1M+ MAU · shipped in 6 months (50% faster than planned).',
+			impact: '1M+ monthly users · 12-month rebrand delivered in 6 months · Jest, RTL, Cypress.',
 			tech: 'React · Remix · Strapi',
 			src: ''
 		},
@@ -107,41 +108,22 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") Selected Work
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
 			p(class="text-sm italic text-gray-400 text-center mb-6 max-w-2xl mx-auto") Additional work available on request — including SaaS, healthcare, and education projects (current client work under NDA).
-		div(class="grid grid-cols-1 m:grid-cols-2 l:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6")
+
+		div(class="portfolio-slider lg:hidden")
+			div(class="swiper portfolio-swiper")
+				div(class="swiper-wrapper")
+					each item in portfolioItems
+						div(class="swiper-slide")
+							+portfolioCard(item)
+			div(class="portfolio-swiper-controls")
+				button(type="button" class="portfolio-swiper-prev" aria-label="Previous project")
+					svg(class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true")
+						path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7")
+				div(class="portfolio-swiper-pagination")
+				button(type="button" class="portfolio-swiper-next" aria-label="Next project")
+					svg(class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true")
+						path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7")
+
+		div(class="hidden lg:grid lg:grid-cols-4 xl:grid-cols-5 gap-6")
 			each item in portfolioItems
-				- var hasLive = item.live && typeof item.live === 'string' && item.live.trim() !== '';
-				- var hasSrc = item.src && typeof item.src === 'string' && item.src.trim() !== '';
-				- var isConfidential = item.confidential === true;
-				- var imageUrl = item.image || 'https://kikeestrada.github.io/kikeestradadev/assets/img/insiders.png';
-				div(class="group block bg-gradient-to-br from-white via-purple-50/30 to-pink-50/20 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-200/50 hover:border-[var(--base-color)]/50 backdrop-blur-sm")
-					if hasLive
-						a(href=item.live target="_blank" rel="noopener noreferrer" class="block relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 aspect-video cursor-pointer")
-							img(src=imageUrl alt=item.title class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500")
-							div(class="absolute inset-0 bg-gradient-to-br from-[var(--base-color)]/0 via-[var(--base-color)]/0 to-[var(--base-color)]/0 group-hover:from-[var(--base-color)]/10 group-hover:via-[var(--base-color)]/15 group-hover:to-[var(--base-color)]/20 transition-all duration-300")
-					else
-						div(class="block relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 aspect-video")
-							img(src=imageUrl alt=item.title class="w-full h-full object-cover opacity-90")
-							if isConfidential
-								div(class="absolute inset-0 flex items-center justify-center bg-[var(--base-color)]/70 px-4")
-									span(class="text-white text-sm font-semibold text-center") Confidential client work
-					div(class="p-4 sm:p-5 bg-gradient-to-b from-transparent to-white/50")
-						h3(class="text-base sm:text-lg font-bold mb-1.5 text-gray-900 group-hover:text-[var(--base-color)] transition-colors duration-300")= item.title
-						if item.tech
-							p(class="text-xs sm:text-sm text-[var(--base-color)]/90 font-medium mb-2")= item.tech
-						if item.summary
-							p(class="text-sm text-gray-700 leading-snug mb-2")= item.summary
-						if item.impact
-							p(class="text-sm text-gray-800 font-medium leading-snug mb-4")= item.impact
-						div(class="flex flex-col gap-2 sm:gap-2.5")
-							if hasLive
-								a(href=item.live target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--base-color)]/5 to-blue-500/5 hover:from-[var(--base-color)]/10 hover:to-blue-500/10 text-xs sm:text-sm text-gray-700 hover:text-[var(--base-color)] rounded-lg transition-all duration-300 border border-[var(--base-color)]/10 hover:border-[var(--base-color)]/30 group/link")
-									span(class="font-medium") View Project
-									svg(class="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-										path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7")
-							else if isConfidential
-								div(class="flex items-center justify-center px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gray-100 text-xs sm:text-sm text-gray-600 rounded-lg border border-gray-200 font-medium") Confidential client work
-							if hasSrc
-								a(href=item.src target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-2.5 sm:px-3 py-2 sm:py-2.5 bg-gradient-to-r from-gray-100 to-gray-50 hover:from-gray-200 hover:to-gray-100 text-xs sm:text-sm text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 border border-gray-200 hover:border-gray-300 group/src")
-									span(class="font-medium") View Source Code
-									svg(class="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover/src:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24")
-										path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4")
+				+portfolioCard(item)

@@ -1,51 +1,38 @@
 -
 	const buildPrinciples = [
 		{
-			title: 'Architecture first',
-			text: 'Define ownership, boundaries, and reusable patterns — starting with frontend architecture, then extending through APIs, CMS, and backend integrations before scaling features.'
+			title: 'Frontend architecture',
+			text: 'Cut a planned 12-month BetUS rebrand to 6 months by owning React/Remix architecture, Strapi integration, and cross-team delivery standards.'
 		},
 		{
-			title: 'AI-assisted coding',
-			text: 'Leverage AI through prompt engineering, custom rules, and reusable skills to accelerate debugging, prototyping, and documentation — augmenting productivity without compromising engineering judgment.'
+			title: 'High-traffic platforms',
+			text: 'Supported 1M+ monthly users by modernizing React/TypeScript, WordPress, PHP, Laravel, Strapi, and API-integrated web platforms.'
 		},
 		{
-			title: 'Human-reviewed decisions',
-			text: 'Architecture, product trade-offs, and production changes stay under engineering ownership.'
+			title: 'Testing & release confidence',
+			text: 'Improved release confidence by establishing Jest, React Testing Library, and Cypress as production standards.'
 		},
 		{
-			title: 'Rapid prototyping',
-			text: 'Validate product direction quickly, then harden what proves valuable.'
+			title: 'Team delivery',
+			text: 'Led 25 designers and developers across two teams. Reduced production delivery time by ~50% through planning, review standards, and Agile execution.'
 		},
 		{
-			title: 'Testing & quality',
-			text: 'Protect delivery with practical unit, integration, and end-to-end coverage where risk is highest.'
+			title: 'AI as a productivity system',
+			text: 'Accelerated delivery with AI-assisted workflows, Cursor rules, AI APIs, and RAG — used for documentation, debugging, and prototyping. Architecture and code review stay human-owned.'
 		},
 		{
-			title: 'Performance & maintainability',
-			text: 'Ship software that stays fast, accessible, and workable for the next team.'
-		},
-		{
-			title: 'Full-stack product delivery',
-			text: 'Ship the product layer, not just the UI: React/TypeScript, API and CMS integrations, backend collaboration, testing, and release workflows.'
-		},
-		{
-			title: 'Developer productivity',
-			text: 'Improve standards, reviews, and workflows so teams deliver more with less friction.'
-		},
-		{
-			title: 'End-to-end delivery',
-			text: 'Own the path from architecture to production: testable code, CI/CD, and reliable releases — with APIs, CMS, and backend integrations as part of the same delivery loop.'
+			title: 'MVP execution',
+			text: 'Accelerated AI-enabled MVP delivery across legal, healthcare, education, and SMB products by defining frontend architecture, API patterns, and delivery standards.'
 		}
 	]
 
 div(class="main-container bg-white border-y border-gray-100" id="how-i-build")
 	div(class="container py-10 lg:py-14")
 		div(class="mb-8 text-center")
-			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") My Engineering Philosophy: Building for Impact
+			h2(class="text-3xl lg:text-4xl font-bold text-[var(--base-color)] mb-3 inline-block relative") How I Build Software
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
-			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") My approach combines frontend architecture as the core depth with pragmatic full-stack product delivery. The goal is always the same: ship high-quality software that delivers measurable business value, faster.
-			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") AI is a multiplier. Architecture, engineering decisions, and product thinking remain human-driven.
-		div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5")
+			p(class="text-gray-700 mt-4 max-w-3xl mx-auto text-base") Evidence from BetUS, JazzSports, Trigal Media, and enterprise delivery.
+		div(class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5")
 			each item in buildPrinciples
 				div(class="bg-slate-50/80 rounded-xl border border-gray-200/80 p-5 hover:shadow-md transition-shadow duration-300")
 					h3(class="text-sm font-semibold uppercase tracking-wide text-blue-600 mb-2")= item.title

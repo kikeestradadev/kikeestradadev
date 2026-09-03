@@ -104,3 +104,77 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+.portfolio-swiper {
+	overflow: hidden;
+
+	.swiper-slide {
+		height: auto;
+		display: flex;
+	}
+
+	.swiper-slide > * {
+		width: 100%;
+	}
+}
+
+.portfolio-swiper-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 1.5rem;
+}
+
+.portfolio-swiper-prev,
+.portfolio-swiper-next {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 9999px;
+	border: 1px solid rgba(70, 130, 180, 0.25);
+	background: #fff;
+	color: var(--base-color);
+	flex-shrink: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.portfolio-swiper-prev:hover,
+.portfolio-swiper-next:hover {
+	background: var(--base-color);
+	border-color: var(--base-color);
+	color: #fff;
+}
+
+.portfolio-swiper-prev.swiper-button-disabled,
+.portfolio-swiper-next.swiper-button-disabled {
+	opacity: 0.35;
+	cursor: default;
+	pointer-events: none;
+}
+
+.portfolio-swiper-pagination {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 6px;
+	min-height: 40px;
+}
+
+.portfolio-swiper-pagination .swiper-pagination-bullet {
+	margin: 0;
+	width: 8px;
+	height: 8px;
+	background: var(--base-color);
+	opacity: 0.25;
+}
+
+.portfolio-swiper-pagination .swiper-pagination-bullet-active {
+	opacity: 1;
+	background: var(--base-color);
+}
