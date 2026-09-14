@@ -12,7 +12,7 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		meta(charset="utf-8")
 		meta(name="description", content=pageDescription)
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(name="keywords", content="Senior Software Engineer, Frontend Architecture, Full-Stack Product Delivery, React, TypeScript, Web Platforms, Node.js, PHP, Laravel, Supabase, Strapi, REST APIs, Design Systems, CI/CD, Testing, AI-Assisted Development")
+		meta(name="keywords", content="Software Engineer, Digital Entrepreneur, Frontend Architecture, Full-Stack Product Delivery, Engineering Leadership, React, TypeScript, Web Platforms, Node.js, PHP, Laravel, Supabase, Strapi, REST APIs, Design Systems, CI/CD, Testing, AI-Assisted Development")
 
 		meta(property="og:title", content=ogTitle)
 		meta(property="og:description", content=pageDescription)
@@ -32,14 +32,15 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		link(rel="canonical", href=siteUrl + '/')
 		meta(name="apple-mobile-web-app-status-bar-style", content="default")
 		meta(name="format-detection", content="telephone=no")
-		link(rel="shortcut icon", type="image/png", href="images/icon_192.png")
-		link(rel="icon", type="image/png", sizes="192x192", href="images/icon_192.png")
-		link(rel="apple-touch-icon", sizes="192x192", href="images/icon_192.png")
+		link(rel="shortcut icon", type="image/png", href="images/icon_new.png")
+		link(rel="icon", type="image/png", href="images/icon_new.png")
+		link(rel="apple-touch-icon", href="images/icon_new.png")
 		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
 		link(rel="preconnect" href="https://fonts.googleapis.com")
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="./tailwind-dist.css")
+		link(rel="stylesheet" href="./styles.css")
 		title= siteName + " | " + content
 		script(type="application/ld+json").
 			{
@@ -47,8 +48,8 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 				"@type": "Person",
 				"name": "Enrique Estrada Nunez",
 				"url": "https://kikeestradadev.github.io/kikeestradadev/",
-				"jobTitle": "Senior Software Engineer",
-				"description": "Senior Software Engineer with deep frontend architecture expertise and full-stack product delivery ownership. Cut a 12-month BetUS rebrand to 6 months. Supported 1M+ monthly users across React, Remix, and Strapi.",
+				"jobTitle": "Software Engineer · Digital Entrepreneur",
+				"description": "Software Engineer and Digital Entrepreneur. Hands-on frontend architecture, full-stack product delivery, and engineering leadership. Cut a 12-month BetUS rebrand to 6 months. Supported 1M+ monthly users across React, Remix, and Strapi.",
 				"sameAs": [
 					"https://www.linkedin.com/in/kikeestrada/",
 					"https://github.com/kikeestradadev"
@@ -85,6 +86,7 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		footer(class='mt-auto bg-white')
 			block main-footer
 		//- here ends the Main Footer
+		include ../modules/contact-fab
 		script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
 		script(src="/assets/index-dist.js")
 		block scripts

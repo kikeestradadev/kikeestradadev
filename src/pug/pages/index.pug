@@ -2,17 +2,16 @@ extends ../config/template
 append config
 	-currentPage		= "Home"
 	-siteName			= 'Enrique Estrada Nunez'
-	-content			= 'Senior Software Engineer'
-	-pageDescription	= 'Senior Software Engineer with deep frontend architecture expertise and full-stack product delivery ownership. Cut a 12-month BetUS rebrand to 6 months. Supported 1M+ monthly users across React, Remix, and Strapi.'
+	-content			= 'Software Engineer · Digital Entrepreneur'
+	-pageDescription	= 'Software Engineer and Digital Entrepreneur. Hands-on frontend architecture, full-stack product delivery, and engineering leadership. Cut a 12-month BetUS rebrand to 6 months. Supported 1M+ monthly users across React, Remix, and Strapi.'
 	-siteUrl			= 'https://kikeestradadev.github.io/kikeestradadev'
 	-ogImage			= siteUrl + '/images/icon_1024.png'
 	-ogTitle			= siteName + ' | ' + content
 block main-header
 	include ../modules/top-nav-title
 block main-container 
-	include ../modules/profile
-	include ../modules/what-im-looking-for
-	include ../modules/how-i-build-software
+	//- About and What I'm Looking For removed — header already states role, stack, AI tools, and target roles.
+	//- How I Build Software hidden — repeated BetUS proof already in highlights and work experience.
 	//- Professional Impact hidden — redundant with header summary and Career Highlights. Re-enable: include ../modules/professional-impact
 	include ../modules/career-highlights
 	include ../modules/work-experience
@@ -27,59 +26,44 @@ block main-footer
 block scripts
 	script.
 		(function () {
-			var desktopQuery = window.matchMedia('(min-width: 1280px)');
-			var portfolioSwiper = null;
-
-			function destroyPortfolioSwiper() {
-				if (!portfolioSwiper) return;
-				portfolioSwiper.destroy(true, true);
-				portfolioSwiper = null;
-			}
-
-			function initPortfolioSwiper() {
-				var el = document.querySelector('.portfolio-swiper');
-				if (!el || typeof Swiper === 'undefined') return;
-				if (desktopQuery.matches) {
-					destroyPortfolioSwiper();
-					return;
-				}
-				if (portfolioSwiper) return;
-				portfolioSwiper = new Swiper(el, {
-					slidesPerView: 1.12,
-					spaceBetween: 16,
-					grabCursor: true,
-					watchOverflow: true,
-					observer: true,
-					observeParents: true,
-					pagination: {
-						el: '.portfolio-swiper-pagination',
-						clickable: true
+			var el = document.querySelector('.portfolio-swiper');
+			if (!el || typeof Swiper === 'undefined') return;
+			new Swiper(el, {
+				slidesPerView: 1.12,
+				spaceBetween: 16,
+				grabCursor: true,
+				watchOverflow: true,
+				observer: true,
+				observeParents: true,
+				pagination: {
+					el: '.portfolio-swiper-pagination',
+					clickable: true
+				},
+				navigation: {
+					nextEl: '.portfolio-swiper-next',
+					prevEl: '.portfolio-swiper-prev'
+				},
+				breakpoints: {
+					480: {
+						slidesPerView: 1.2,
+						spaceBetween: 16
 					},
-					navigation: {
-						nextEl: '.portfolio-swiper-next',
-						prevEl: '.portfolio-swiper-prev'
+					640: {
+						slidesPerView: 2,
+						spaceBetween: 20
 					},
-					breakpoints: {
-						480: {
-							slidesPerView: 1.2,
-							spaceBetween: 16
-						},
-						640: {
-							slidesPerView: 2,
-							spaceBetween: 20
-						},
-						960: {
-							slidesPerView: 2.25,
-							spaceBetween: 24
-						}
+					960: {
+						slidesPerView: 2.25,
+						spaceBetween: 24
+					},
+					1280: {
+						slidesPerView: 3,
+						spaceBetween: 24
+					},
+					1536: {
+						slidesPerView: 3.2,
+						spaceBetween: 28
 					}
-				});
-			}
-
-			if (desktopQuery.addEventListener) {
-				desktopQuery.addEventListener('change', initPortfolioSwiper);
-			} else if (desktopQuery.addListener) {
-				desktopQuery.addListener(initPortfolioSwiper);
-			}
-			initPortfolioSwiper();
+				}
+			});
 		})();

@@ -1,5 +1,6 @@
-//- Employment date pill with tenure duration
+//- Employment date — compact inline text on mobile, pill on tablet/desktop
 mixin employmentDate(dateRange, duration)
-	span(class="inline-block px-4 py-2 bg-gradient-to-r from-[var(--base-color)]/10 to-blue-500/10 text-[var(--base-color)] text-sm font-semibold rounded-lg border border-[var(--base-color)]/20 text-center m:text-right")
-		span(class="block whitespace-nowrap")= dateRange
-		span(class="block text-[11px] font-medium text-gray-600 mt-0.5 whitespace-nowrap")= duration
+	span(class="employment-date")
+		span(class="employment-date__range")= dateRange
+		span(class="employment-date__sep" aria-hidden="true") ·
+		span(class="employment-date__duration")= duration

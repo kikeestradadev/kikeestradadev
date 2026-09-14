@@ -109,7 +109,7 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 			div(class="w-24 h-1 bg-gradient-to-r from-[var(--base-color)] to-blue-600 rounded-full mx-auto")
 			p(class="text-sm italic text-gray-400 text-center mb-6 max-w-2xl mx-auto") Additional work available on request — including SaaS, healthcare, and education projects (current client work under NDA).
 
-		div(class="portfolio-slider lg:hidden")
+		div(class="portfolio-slider")
 			div(class="swiper portfolio-swiper")
 				div(class="swiper-wrapper")
 					each item in portfolioItems
@@ -123,7 +123,3 @@ div(class="main-container bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-
 				button(type="button" class="portfolio-swiper-next" aria-label="Next project")
 					svg(class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true")
 						path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7")
-
-		div(class="hidden lg:grid lg:grid-cols-4 xl:grid-cols-5 gap-6")
-			each item in portfolioItems
-				+portfolioCard(item)

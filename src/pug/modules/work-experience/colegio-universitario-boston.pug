@@ -1,0 +1,31 @@
+//- Colegio Universitario Boston
+include ../../mixins/employment-date
+include ../../mixins/stack-badges
+include ../../mixins/employment-reference
+div
+	div(class="bg-gradient-to-br from-white to-gray-50/50 rounded-xl shadow-lg ring-1 ring-[var(--base-color)]/10 p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl transition-shadow duration-300 group backdrop-blur-sm")
+		div(class="flex flex-col m:flex-row m:items-start m:justify-between mb-4 gap-3")
+			div(class="flex-1")
+				h3(class="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-[var(--base-color)] transition-colors mb-2") Colegio Universitario Boston
+				div(class="flex flex-wrap gap-1.5 mb-2")
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Web Development
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Faculty Leadership
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Programming
+					span(class="text-[11px] px-2 py-0.5 rounded bg-[var(--base-color)]/10 border border-[var(--base-color)]/15 text-[var(--base-color)] font-semibold") Business Informatics
+				h4(class="text-lg font-semibold text-[var(--base-color)] mb-3") Web Development Instructor & Head of Informatics Faculty
+			div(class="flex-shrink-0")
+				+employmentDate('Feb 2009 - Oct 2011', '2 yrs 9 mos')
+		div(class="space-y-4")
+			div(class="space-y-3")
+				ul(class="space-y-2.5 list-none text-gray-700 text-base")
+					li(class="flex items-start gap-2")
+						span(class="text-[var(--base-color)] font-bold shrink-0") •
+						span(class="font-semibold text-gray-900 leading-snug") Led 25+ informatics faculty across programming and business computing while remaining a hands-on web development instructor.
+					li(class="flex items-start gap-2")
+						span(class="text-[var(--base-color)] font-bold shrink-0") •
+						span(class="leading-snug") Taught university-level web development, covering practical frontend delivery for programming students.
+					li(class="flex items-start gap-2")
+						span(class="text-[var(--base-color)] font-bold shrink-0") •
+						span(class="leading-snug") Coordinated teaching standards and course delivery for programming and business informatics so multiple instructors could run a consistent curriculum.
+			+stackBadges(['HTML', 'CSS', 'JavaScript', 'Web Development', 'Faculty Leadership'])
+			+employmentReference('Emerson Paniagua', 'https://www.linkedin.com/in/paniagua-emerson-22a1b02a/')

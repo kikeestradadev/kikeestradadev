@@ -1,6 +1,7 @@
 //- Gambling Industry
 include ../../mixins/employment-date
 include ../../mixins/stack-badges
+include ../../mixins/employment-reference
 div
 	div(class="bg-gradient-to-br from-white to-gray-50/50 rounded-xl shadow-lg ring-1 ring-[var(--base-color)]/10 p-6 lg:p-8 border-l-4 border-[var(--base-color)] hover:shadow-2xl transition-shadow duration-300 group backdrop-blur-sm")
 		div(class="flex flex-col m:flex-row m:items-start m:justify-between mb-4 gap-3")
@@ -17,7 +18,7 @@ div
 				ul(class="space-y-2.5 list-none text-gray-700 text-base")
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold shrink-0") •
-						span(class="font-semibold text-gray-900 leading-snug") Led delivery for 25 designers and developers across two teams by owning technical direction, code quality, hiring support, mentoring, and delivery schedules.
+						span(class="font-semibold text-gray-900 leading-snug") Led 25 designers and developers across two teams while remaining hands-on on WordPress, PHP, .NET, and JavaScript delivery — owning technical direction, code quality, hiring support, and schedules.
 					li(class="flex items-start gap-2")
 						span(class="text-[var(--base-color)] font-bold shrink-0") •
 						span(class="leading-snug") Managed 40+ major projects across sportsbook, casino, email, SEO, and commercial brand properties by coordinating WordPress, PHP, .NET, and JavaScript delivery.
@@ -28,3 +29,4 @@ div
 						span(class="text-[var(--base-color)] font-bold shrink-0") •
 						span(class="leading-snug") Improved multi-brand platform consistency by training developers and UX/UI teams on maintainable frontend and production standards.
 			+stackBadges(['WordPress', 'PHP', '.NET', 'JavaScript', 'SEO', 'Email & banner production'])
+			+employmentReference('Juan Carlos Brown', 'https://www.linkedin.com/in/juancbrown/')
