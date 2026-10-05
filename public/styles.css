@@ -70,6 +70,12 @@ body {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   margin: 0 0 1rem;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .metrics-section-label {
+    text-align: left;
+  }
 }
 
 .metrics-top-grid {
@@ -83,6 +89,12 @@ body {
   background: rgba(255, 255, 255, 0.12) !important;
   border-radius: 8px;
   padding: 1rem;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .metric-card {
+    text-align: left;
+  }
 }
 
 .metric-number {
